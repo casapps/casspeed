@@ -6,8 +6,8 @@
 .github/
 .gitea/
 
-# Entire docker directory
-docker/
+# Docker compose files (not needed in image)
+docker/docker-compose*.yml
 
 # Runtime volume data (NEVER include in image)
 rootfs/
@@ -27,5 +27,7 @@ releases/
 .ai/
 .windsurf/
 
-# Docs
+# Docs (not needed in image)
+docs/
 *.md
+!docker/rootfs/**

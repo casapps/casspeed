@@ -1,6 +1,6 @@
 # Infer PROJECTNAME and PROJECTORG from git remote or directory path (NEVER hardcode)
-PROJECTNAME := $(shell git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)(\.git)?$$|\1|' || basename "$$(pwd)")
-PROJECTORG := $(shell git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)/[^/]+(\.git)?$$|\1|' || basename "$$(dirname "$$(pwd)")")
+PROJECTNAME := $(shell git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)\.git$$|\1|' || basename "$$(pwd)")
+PROJECTORG := $(shell git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)/[^/]+\.git$$|\1|' || basename "$$(dirname "$$(pwd)")")
 
 # Version: env var > release.txt > default
 VERSION ?= $(shell cat release.txt 2>/dev/null || echo "0.1.0")
@@ -51,21 +51,38 @@ build: clean
 	@echo "Downloading Go modules..."
 	@$(GO_DOCKER) go mod download
 
-	# Build for host OS/ARCH
-	@echo "Building host binary..."
+	# Build for host OS/ARCH (server)
+	@echo "Building host server binary..."
 	@$(GO_DOCKER) sh -c "GOOS=$$(go env GOOS) GOARCH=$$(go env GOARCH) \
 		go build -ldflags \"$(LDFLAGS)\" -o $(BINDIR)/$(PROJECTNAME) ./src"
 
-	# Build all platforms
+	# Build for host OS/ARCH (client)
+	@echo "Building host client binary..."
+	@$(GO_DOCKER) sh -c "GOOS=$$(go env GOOS) GOARCH=$$(go env GOARCH) \
+		go build -ldflags \"$(LDFLAGS)\" -o $(BINDIR)/$(PROJECTNAME)-cli ./src/client"
+
+	# Build all platforms (server)
 	@for platform in $(PLATFORMS); do \
 		OS=$${platform%/*}; \
 		ARCH=$${platform#*/}; \
 		OUTPUT=$(BINDIR)/$(PROJECTNAME)-$$OS-$$ARCH; \
 		[ "$$OS" = "windows" ] && OUTPUT=$$OUTPUT.exe; \
-		echo "Building $$OS/$$ARCH..."; \
+		echo "Building server $$OS/$$ARCH..."; \
 		$(GO_DOCKER) sh -c "GOOS=$$OS GOARCH=$$ARCH \
 			go build -ldflags \"$(LDFLAGS)\" \
 			-o $$OUTPUT ./src" || exit 1; \
+	done
+
+	# Build all platforms (client)
+	@for platform in $(PLATFORMS); do \
+		OS=$${platform%/*}; \
+		ARCH=$${platform#*/}; \
+		OUTPUT=$(BINDIR)/$(PROJECTNAME)-cli-$$OS-$$ARCH; \
+		[ "$$OS" = "windows" ] && OUTPUT=$$OUTPUT.exe; \
+		echo "Building client $$OS/$$ARCH..."; \
+		$(GO_DOCKER) sh -c "GOOS=$$OS GOARCH=$$ARCH \
+			go build -ldflags \"$(LDFLAGS)\" \
+			-o $$OUTPUT ./src/client" || exit 1; \
 	done
 
 	@echo "Build complete: $(BINDIR)/"

@@ -72,9 +72,6 @@ COPY --from=builder /build/binary/casspeed /usr/local/bin/casspeed
 # Note: This is docker/rootfs/ (build context), NOT runtime ./rootfs/ volumes
 COPY docker/rootfs/ /
 
-# Copy Dockerfile to image (for reference and backup)
-COPY docker/Dockerfile /root/Dockerfile
-
 # Make all binaries/scripts in /usr/local/bin executable (755)
 RUN chmod 755 /usr/local/bin/*
 

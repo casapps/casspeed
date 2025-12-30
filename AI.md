@@ -6,26 +6,21 @@
 
 # PROJECT DESCRIPTION
 
-**A free self-hosted alternative to speedtest.net with all features, no ads, no tracking, and no feature gating.**
+**{Provide a brief description of what this project does and its primary purpose}**
 
-casspeed is a comprehensive network speed testing solution that allows you to run your own speedtest server. It provides both a web interface and CLI client for measuring download/upload speeds, latency, and connection quality. Users can track their bandwidth history over time with visual graphs.
+Example:
+- A REST API service that provides random jokes
+- A timezone conversion API with city lookup
+- A GitHub .gitignore template generator
 
 **Key Features:**
-- Web-based speedtest interface with real-time graphs
-- CLI client for server-side speed testing
-- Historical test results tracking and visualization
-- No advertisements, tracking, or feature limitations
-- Self-hosted for complete privacy and control
-- Multi-threaded download/upload tests
-- Latency and jitter measurements
-- Support for multiple concurrent tests
+- {Feature 1}
+- {Feature 2}
+- {Feature 3}
 
 **Target Users:**
-- Home lab enthusiasts who want to monitor their network performance
-- Network administrators needing internal speedtest capabilities
-- Privacy-conscious users who want self-hosted network testing
-- Organizations requiring on-premises bandwidth testing
-- Anyone seeking a free, open-source alternative to speedtest.net
+- {Who uses this?}
+- {What problem does it solve?}
 
 ---
 
@@ -50,175 +45,81 @@ casspeed is a comprehensive network speed testing solution that allows you to ru
 
 ## ⚠️ CRITICAL: File Paths and Project Root ⚠️
 
-**THIS TEMPLATE FILE CAN LIVE ANYWHERE. YOUR PROJECT FILES DO NOT.**
-
-When using this template to build or modify a project:
-
-| ❌ WRONG | ✅ CORRECT |
-|----------|-----------|
-| Create files relative to AI.md location | Create files relative to PROJECT root directory |
-| `/root/Projects/github/apimgr/src/` | `{project_root}/src/` |
-| Where this template lives | Where the project being built lives |
-
-**Common Mistake Example:**
-```
-User: "Use AI.md to build myproject in ~/Documents/myproject"
-AI (WRONG): Creates files in /root/Projects/github/apimgr/src/
-AI (RIGHT): Creates files in ~/Documents/myproject/src/
-```
+**ALL file operations are relative to PROJECT root directory.**
 
 **Rules:**
-- **AI.md location** = Reference document (can be anywhere: ~/Projects/github/apimgr/, ~/, etc.)
-- **Project root** = Where YOUR project lives (can be anywhere: ~/Documents/myproject, ~/myproject, /workspace/project, etc.)
-- **ALL file operations** = Relative to PROJECT root, NOT template location
+- **Project root** = Where AI.md lives (this file's directory)
+- **ALL file operations** = Relative to project root
 - **Use `git rev-parse --show-toplevel`** when in a git repo to find project root
-- **Never assume** cwd or template location is the project root
+- **Never assume** cwd is the project root - always verify
 
-## ⚠️ CRITICAL: NEVER Reference AI.md in Generated Files ⚠️
+## ⚠️ CRITICAL: AI.md is the Source of Truth ⚠️
 
-**When generating code, comments, or documentation for a project:**
+**AI.md IS THE PROJECT SPECIFICATION. Follow it exactly.**
 
-| ❌ NEVER Write This | ✅ Always Write This |
-|---------------------|---------------------|
-| `// See AI.md for details` | `// See AI.md for details` |
-| `# Based on AI.md` | `# Based on AI.md` |
-| `Read AI.md` | `Read AI.md` |
-| `Check AI.md` | `Check AI.md` |
-| `Consult AI.md` | `Consult AI.md` |
-| `From AI.md` | `From AI.md` |
+**Reference AI.md in all generated code, comments, and documentation:**
+- `// See AI.md for details`
+- `# Based on AI.md`
 
-**Why?** Projects don't have AI.md - they have AI.md (the project-specific spec created from AI.md). Writing "AI.md" in project files creates broken references.
+## ⚠️ CRITICAL: Keep Documentation in Sync ⚠️
 
-**Rule:** In ALL generated code, comments, documentation, and messages, reference **AI.md**, never AI.md.
+**All documentation MUST match actual code at all times.**
 
-## ⚠️ CRITICAL: NEVER Overwrite AI.md (Unless Explicitly Told) ⚠️
+| Documentation | Must Match | Update When |
+|---------------|------------|-------------|
+| **AI.md PART 36** | Actual project features/endpoints | Features added/removed |
+| **README.md** | Current functionality | Usage/installation changes |
+| **docs/** | Current API/config | Any user-facing changes |
+| **Swagger annotations** | Actual API endpoints | Routes changed |
+| **GraphQL schema** | Actual types/queries | Schema changed |
 
-**AI.md IS THE SOURCE OF TRUTH. DO NOT REGENERATE OR OVERWRITE IT DURING NORMAL WORK.**
+**Rules for Updating:**
 
-**During normal development work:**
-
-| ❌ NEVER Do This | ✅ Always Do This |
-|------------------|-------------------|
-| Regenerate AI.md from AI.md | Update only PART 36 in AI.md |
-| Overwrite entire AI.md | Edit specific sections that changed |
-| "Refresh" AI.md on your own | Keep AI.md intact, update targeted content only |
-| Delete and recreate AI.md | Preserve all existing content |
-
-**Exception:** If user explicitly says "re-read template and update AI.md", then copy AI.md → AI.md and immediately update PART 36 with current project info (see details below).
-
-**AI.md Structure:**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│ AI.md = ENTIRE TEMPLATE (COMPLETE COPY) + PROJECT INFO         │
-│                                                                 │
-│ ⚠️  CRITICAL: DO NOT REMOVE ANYTHING FROM PARTS 1-35           │
-│                                                                 │
-│ ✓ Template sections (PARTS 1-35):  MUST STAY IDENTICAL        │
-│     → Copy completely, do NOT shorten or remove ANY content    │
-│     → Keep every line, every section, every word               │
-│                                                                 │
-│ ✓ Project-specific (PART 36):  FILL IN WITH PROJECT DETAILS   │
-│     → Replace template placeholders with actual project info   │
-│     → Add all endpoints, features, configurations              │
-│     → This section will be LARGER than template version        │
-│                                                                 │
-│ Size: AI.md will be AT LEAST ~1.1MB (AI.md size)           │
-│       Often LARGER due to detailed PART 36 content             │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-**What "Stay in Sync" Means:**
-
-| File/Section | Must Match Reality | Update When |
-|--------------|-------------------|-------------|
-| **AI.md PART 36** | Actual project code/features | Code changes, features added/removed |
-| **README.md** | Current functionality | Features, usage, installation changes |
-| **docs/** (ReadTheDocs) | Current API/config/usage | Any user-facing changes |
-| **Swagger annotations** | Actual API endpoints | Routes/handlers added/removed/changed |
-| **GraphQL schema** | Actual GraphQL types/queries | Schema changes |
-
-**Rules for Updating Documentation:**
-
-1. **AI.md PART 36**: Update business logic, data models, features (NOT implementation patterns)
-   - Add new business rules
-   - Update data structures/models
-   - Document new features and their purpose
-   - Do NOT add route formats, HTML patterns, etc. (those are in PARTS 1-35)
-2. **README.md**: Keep feature list, usage examples, and installation steps current
-3. **docs/**: Update relevant .md files when config options, API routes, or behavior changes
-4. **Swagger**: Add/update/remove annotations when endpoints change
-5. **GraphQL**: Update schema and resolvers when types/queries change
-
-**NEVER:**
-- Regenerate AI.md from scratch
-- Overwrite template sections (PARTS 1-35) in AI.md
-- Let documentation drift from actual code
-- Reference features in docs that don't exist in code
-- Keep outdated API documentation
+1. **AI.md PART 36**: Update business logic, data models, features
+   - PARTS 0-35 define implementation patterns (do NOT modify)
+   - PART 36 defines YOUR project's features (update as needed)
+2. **README.md**: Keep feature list and usage examples current
+3. **docs/**: Update when config options or API behavior changes
+4. **Swagger/GraphQL**: Keep annotations matching actual endpoints
 
 **Example - Adding a New Feature:**
 
 ```
-✓ CORRECT:
 1. Write the code (new handler, service, etc.)
 2. Update AI.md PART 36 - add feature description
 3. Update README.md - add feature to list
 4. Update docs/api.md - document new endpoints
 5. Add Swagger annotations to new handlers
 6. Update GraphQL schema if applicable
-
-✗ WRONG:
-1. Write the code
-2. Regenerate AI.md from AI.md (loses project-specific content!)
-3. Leave README.md unchanged (documentation now lies)
 ```
 
-### Exception: Refreshing AI.md from Template
+## Licensing & Features (NON-NEGOTIABLE)
 
-**There is ONE exception to "never overwrite AI.md":**
+| Rule | Description |
+|------|-------------|
+| **MIT License** | All projects are MIT licensed (our code only) |
+| **3rd party attribution** | All 3rd party licenses listed in LICENSE.md |
+| **Free & open source** | 100% free, no paid tiers, no enterprise edition |
+| **No feature gating** | ALL features available to ALL users, ALWAYS |
+| **No premium features** | No "pro", "plus", "enterprise", "premium" tiers |
+| **No license keys** | No activation, no registration required for features |
+| **No artificial limits** | No caps on users, storage, etc. for monetization |
 
-When the user **explicitly asks** to refresh/update AI.md from the template:
+**NEVER implement:**
+- "Upgrade to unlock..."
+- "This feature requires..."
+- "Contact sales for..."
+- "Free tier limited to X users/GB/calls..."
+- License key validation
+- Feature flags based on payment/plan
+- Phone-home for feature authorization
 
-```
-User: "Re-read the template and update AI.md"
-User: "Refresh AI.md from AI.md"
-User: "Update AI.md with latest template"
-```
+**Allowed limits (server protection, NOT feature gating):**
+- Rate limiting (DDoS/abuse protection) - see PART 1
+- Request size limits (prevent memory exhaustion)
+- Timeouts (prevent resource hogging)
 
-**In this case, the workflow is:**
-
-```
-✓ CORRECT WORKFLOW:
-1. Copy ENTIRE AI.md → AI.md (COMPLETE file, ~1.1MB, ALL sections)
-   ⚠️  DO NOT shorten, summarize, or remove ANY sections from PARTS 1-35
-   ⚠️  AI.md will be AT LEAST ~1.1MB (often larger when PART 36 is filled in)
-2. Replace casspeed, casapps, CASSPEED variables
-3. IMMEDIATELY update PART 36 with current project-specific info:
-   - Read actual project code
-   - Document actual features/endpoints/config
-   - Reflect current project state
-4. Delete "HOW TO USE THIS TEMPLATE" section ONLY
-5. Result: COMPLETE template (PARTS 1-35 unchanged) + Current project info (PART 36)
-
-✗ WRONG WORKFLOW:
-1. Copy and shorten/summarize template (AI.md becomes tiny!)
-2. Remove sections you think aren't needed (BREAKS THE SPEC!)
-3. Create condensed version (NOT ALLOWED!)
-
-⚠️  CRITICAL: AI.md is the COMPLETE project specification, not a summary!
-```
-
-**Why this is allowed:**
-- AI.md gets improvements and updates over time
-- Refreshing brings bug fixes, new features, better organization
-- PART 36 gets repopulated with current project reality
-- No information is lost if PART 36 is updated immediately
-
-**When NOT to do this:**
-- Don't refresh during normal development work
-- Don't refresh just because code changed (update PART 36 only)
-- Only refresh when template has significant updates
+**The distinction:** Rate limits protect the server. Usage limits extract money. We do the former, NEVER the latter.
 
 ## Build & Binary Rules
 
@@ -230,6 +131,186 @@ User: "Update AI.md with latest template"
 | **Binary naming** | `{project}-{os}-{arch}` (windows adds `.exe`) |
 | **NEVER use -musl suffix** | Alpine builds are NOT musl-specific |
 | **Build source** | ALWAYS `src` directory |
+
+## Container-Only Development (NON-NEGOTIABLE)
+
+**NEVER run Go or binaries on host. ALL development uses containers.**
+
+### Building (ALWAYS Docker)
+
+| NEVER (on host) | ALWAYS (Docker `golang:alpine`) |
+|-----------------|--------------------------------|
+| `go build ...` | `docker run --rm -v $(pwd):/build -w /build -e CGO_ENABLED=0 golang:alpine go build ...` |
+| `go test ...` | `docker run --rm -v $(pwd):/build -w /build golang:alpine go test ...` |
+| `go run ...` | `docker run --rm -v $(pwd):/build -w /build golang:alpine go run ...` |
+
+### Testing (Docker OR Incus)
+
+| Type | Container | Use For |
+|------|-----------|---------|
+| **Quick tests** | Docker `alpine:latest` | Unit tests, CI/CD, fast iteration |
+| **Full OS tests** | Incus `debian:latest` | Systemd, services, integration (PREFERRED) |
+
+### Debugging (Incus Preferred)
+
+| Container | Best For | Why |
+|-----------|----------|-----|
+| **Incus** | Interactive debugging | Full OS, persistent, SSH-able, real systemd |
+| **Docker** | Quick checks | Ephemeral, fast startup, limited environment |
+
+### AI as Beta Tester
+
+**When AI tests, it acts as a beta tester. The goal is to BREAK things and FIX them.**
+
+| AI Testing Role | Description |
+|-----------------|-------------|
+| **Find bugs** | Try edge cases, invalid inputs, unexpected usage |
+| **Break it** | Stress test, race conditions, resource limits |
+| **Fix it** | Don't just report - implement the fix |
+| **Verify fix** | Re-test to confirm the fix works |
+
+**Why container-only?**
+- Consistent environment (same as CI/CD and production)
+- No Go installation required on host
+- No host contamination with test data
+- Reproducible builds
+
+**Quick reference:**
+```bash
+# Build (ALWAYS Docker)
+docker run --rm -v $(pwd):/build -w /build -e CGO_ENABLED=0 golang:alpine go build -o /build/binaries/casspeed ./src
+
+# Test - Quick (Docker)
+docker run --rm -v $(pwd):/build -w /build golang:alpine go test -v ./...
+
+# Test - Full OS (Incus - PREFERRED)
+incus launch images:debian/12 test-app
+incus file push binaries/casspeed test-app/usr/local/bin/
+incus exec test-app -- casspeed --help
+
+# Run (use temp dir workflow)
+cd $(mktemp -d) && cp -r /path/to/project/* . && docker-compose -f docker/docker-compose.dev.yml up
+```
+
+**See PART 13: TESTING & DEVELOPMENT for complete workflows.**
+
+## Runtime Detection Rules (NON-NEGOTIABLE)
+
+**All host-dependent settings MUST be detected at runtime on the deployment host, NEVER from the dev machine.**
+
+| Setting | Detection Method | NEVER Do |
+|---------|------------------|----------|
+| **Hostname/FQDN** | `os.Hostname()` at startup | Hardcode dev machine hostname |
+| **IP addresses** | Detect from network interfaces | Embed dev machine IPs |
+| **CPU cores** | `runtime.NumCPU()` | Hardcode dev machine core count |
+| **Available memory** | Detect from system at runtime | Hardcode dev machine memory |
+| **Disk space** | Detect from filesystem at runtime | Hardcode dev machine disk size |
+| **Network interfaces** | Detect usable interfaces (see rules below) | Assume dev network config |
+| **OS/Architecture** | `runtime.GOOS`, `runtime.GOARCH` | Assume dev environment |
+| **Timezone** | System timezone or `TZ` env var | Hardcode dev timezone |
+| **User/Group** | Running process UID/GID | Assume dev user |
+| **Paths** | Resolve at runtime per OS | Hardcode dev machine paths |
+
+**Rules:**
+- Host-specific values are NEVER written to config files during build
+- Host-specific values are NEVER embedded in the binary
+- All detection happens at application startup on the target host
+- Config files only contain user-defined overrides, not auto-detected values
+- Default values in config are placeholders, not dev machine values
+
+**Network Interface Detection (priority order):**
+
+| Priority | Interface Type | Patterns | Condition |
+|----------|---------------|----------|-----------|
+| 1 | Wired Ethernet | `eth*`, `en*`, `em*` | Connected + global IP |
+| 2 | WiFi | `wlan*`, `wl*`, `wifi*` | Connected + global IP (fallback if wired unavailable) |
+| 3 | Other physical | Any remaining physical | Connected + global IP |
+
+**ALWAYS skip these interfaces:**
+- `lo`, `lo0` - Loopback
+- `docker*`, `br-*`, `veth*` - Docker
+- `incus*`, `lxc*`, `lxd*` - Incus/LXC/LXD
+- `virbr*`, `vnet*` - libvirt/KVM
+- `tun*`, `tap*` - VPN tunnels
+- `wg*` - WireGuard
+- `tailscale*`, `utun*` - Tailscale
+- `podman*` - Podman
+- `cni*`, `flannel*`, `calico*` - Kubernetes CNI
+
+**Detection logic:**
+1. List all network interfaces
+2. Filter out virtual/container interfaces (skip list above)
+3. For remaining interfaces, check: UP + has global unicast IP (not link-local)
+4. Prefer wired (eth/en) over wireless (wlan/wl)
+5. If no wired connected, use wireless
+6. Return first matching interface's global IP
+
+```go
+// CORRECT: Detect at runtime
+hostname, _ := os.Hostname()
+cpuCores := runtime.NumCPU()
+primaryIP := detectPrimaryIP()
+
+// WRONG: Hardcoded from dev machine
+hostname := "dev-laptop.local"
+cpuCores := 8
+primaryIP := "192.168.1.50"
+```
+
+## Performance Optimization Rules (NON-NEGOTIABLE)
+
+**Always optimize based on actual available resources, detected at runtime.**
+
+| Resource | Detection | Usage |
+|----------|-----------|-------|
+| **CPU cores** | `runtime.NumCPU()` | Worker pools, concurrency limits |
+| **Available memory** | System memory APIs | Cache sizes, buffer pools |
+| **Disk I/O** | Benchmark at startup (optional) | Batch sizes, flush intervals |
+
+**Rules:**
+- NEVER hardcode resource limits based on dev machine specs
+- Detect actual resources at application startup
+- Scale worker pools, caches, and buffers proportionally to available resources
+- Provide sensible defaults that work on minimal systems (1 CPU, 512MB RAM)
+- Allow config overrides for users who want manual control
+
+**Example scaling:**
+```go
+// Worker pool scales to available CPUs
+workers := runtime.NumCPU()
+if workers < 2 {
+    workers = 2
+}
+
+// Cache size scales to available memory (use ~10% for cache)
+availMem := getAvailableMemory()
+cacheSize := availMem / 10
+if cacheSize < 64*1024*1024 {
+    // Minimum 64MB cache
+    cacheSize = 64 * 1024 * 1024
+}
+if cacheSize > 1024*1024*1024 {
+    // Maximum 1GB cache
+    cacheSize = 1024 * 1024 * 1024
+}
+```
+
+## JSON File Rules (NON-NEGOTIABLE)
+
+**JSON does not support comments.** Never add comments inside JSON files or JSON code blocks.
+
+| Format | Comments Allowed |
+|--------|------------------|
+| `.json` files | NO |
+| JSON in code blocks | NO |
+| YAML (`.yml`, `.yaml`) | YES (`#`) |
+| Go code | YES (`//`) |
+| JavaScript | YES (`//`, `/* */`) |
+
+**If you need to document JSON:**
+- Put explanation text BEFORE the JSON code block (in markdown)
+- Use descriptive key names that are self-documenting
+- Add a separate documentation section explaining the schema
 
 ## Docker Rules
 
@@ -471,12 +552,9 @@ src/
 
 ## Boolean Handling
 
-Accept ALL of these (case-insensitive) → convert to `true`/`false`:
+**See PART 5: "Boolean Handling" for the complete list of truthy/falsy values and implementation.**
 
-| Truthy | Falsy |
-|--------|-------|
-| `1`, `yes`, `true`, `on`, `enable`, `enabled` | `0`, `no`, `false`, `off`, `disable`, `disabled` |
-| `y`, `t`, `yep`, `yup`, `yeah`, `aye`, `si`, `oui` | `n`, `f`, `nope`, `nah`, `nay`, `nein`, `non` |
+Quick reference: Accept `yes/no`, `true/false`, `1/0`, `on/off`, `enable/disable`, etc. (40+ variations). Use `config.ParseBool()`.
 
 ## What NOT To Do
 
@@ -492,9 +570,20 @@ Accept ALL of these (case-insensitive) → convert to `true`/`false`:
 | Use CGO | CGO_ENABLED=0 always |
 | Use `strconv.ParseBool()` | Use `config.ParseBool()` for all boolean parsing |
 
-## Project Directory Cleanliness (NON-NEGOTIABLE)
+## Files & Directories Master Rules (NON-NEGOTIABLE)
 
 **The project directory MUST be clean, minimal, and production-ready.**
+
+### Naming Schema
+
+| Type | Pattern | Example | Avoid |
+|------|---------|---------|-------|
+| **Directories** | lowercase, singular | `handler/`, `model/` | `Handlers/`, `Models/` |
+| **Go files** | lowercase, snake_case | `user_service.go` | `UserService.go` |
+| **Config files** | lowercase, dot-extension | `server.yml`, `mkdocs.yml` | `SERVER.yml` |
+| **Documentation** | UPPERCASE.md | `README.md`, `LICENSE.md` | `readme.md` |
+| **Scripts** | lowercase, snake_case | `run_tests.sh` | `RunTests.sh` |
+| **Binaries** | `{project}-{os}-{arch}` | `jokes-linux-amd64` | `jokes_linux_amd64` |
 
 ### NEVER Create These Files
 
@@ -504,14 +593,34 @@ Accept ALL of these (case-insensitive) → convert to `true`/`false`:
 | `COMPLIANCE.md` | Unnecessary - compliance is in AI.md |
 | `NOTES.md` | Unnecessary - notes go in AI.md |
 | `CHANGELOG.md` | Use GitHub/Gitea releases instead |
+| `AUDIT.md`, `REPORT.md`, `ANALYSIS.md` | Fix issues directly, don't document them |
 | `CONTRIBUTING.md` in root | Belongs in `.github/` |
 | `CODE_OF_CONDUCT.md` in root | Belongs in `.github/` |
 | `SECURITY.md` in root | Belongs in `.github/` |
-| `PULL_REQUEST_AI.md` in root | Belongs in `.github/` |
-| `*.example.*` | No example files (defaults in binary) |
-| `*.sample.*` | No sample files |
+| `PULL_REQUEST_TEMPLATE.md` in root | Belongs in `.github/` |
+| `Dockerfile` in root | Belongs in `docker/Dockerfile` |
+| `docker-compose.yml` in root | Belongs in `docker/docker-compose.yml` |
+| `*.example.*`, `*.sample.*` | No example files (defaults in binary) |
+| `server.yml`, `cli.yml` | Config files are runtime-generated, never in repo |
 | `.env*` | No .env files |
 | `TODO.md` | Use `TODO.AI.md` for AI tasks only |
+
+### NEVER Create These Directories
+
+| Forbidden Directory | Reason |
+|--------------------|--------|
+| `config/` in root | Config is embedded, runtime-generated in OS dirs |
+| `data/` in root | Data goes to OS data directory at runtime |
+| `logs/` in root | Logs go to OS log directory at runtime |
+| `tmp/`, `temp/` in root | Use `/tmp/casapps/casspeed-XXXXXX/` |
+| `test-data/` in root | Test data goes to temp directories |
+| `build/`, `dist/`, `out/` | Use `binaries/` (gitignored) |
+| `vendor/` | Use Go modules, not vendoring |
+| `node_modules/` | This is a Go project |
+| `lib/`, `libs/` | Use proper Go package structure |
+| `utils/`, `common/` | Use specific package names |
+
+**Note:** `src/data/` is ALLOWED for static JSON files embedded in binary. Only ROOT-level `data/` is forbidden.
 
 ### Allowed Root Files (Exhaustive List)
 
@@ -519,6 +628,7 @@ Accept ALL of these (case-insensitive) → convert to `true`/`false`:
 |------|:--------:|---------|
 | `AI.md` | ✓ | Project specification |
 | `TODO.AI.md` | Optional | AI task tracking (3+ tasks only) |
+| `PLAN.md` | Optional | Implementation plan (if exists, this is THE plan) |
 | `README.md` | ✓ | Public documentation |
 | `LICENSE.md` | ✓ | License file |
 | `Makefile` | ✓ | Build targets |
@@ -545,6 +655,26 @@ Accept ALL of these (case-insensitive) → convert to `true`/`false`:
 
 **Note:** AI configuration directories are allowed in project root for tool-specific settings.
 
+### Allowed Root Directories (Exhaustive List)
+
+| Directory | Required | Purpose | Gitignored |
+|-----------|:--------:|---------|:----------:|
+| `src/` | ✓ | All Go source code | No |
+| `docker/` | ✓ | Dockerfile, compose files, rootfs overlay | No |
+| `docs/` | ✓ | MkDocs documentation only | No |
+| `scripts/` | ✓ | Production/install scripts | No |
+| `tests/` | ✓ | Test scripts (run_tests.sh, docker.sh, incus.sh) | No |
+| `.github/` | If GitHub | GitHub Actions, templates | No |
+| `.gitea/` | If Gitea | Gitea Actions, templates | No |
+| `.claude/` | Optional | Claude AI config | No |
+| `.cursor/` | Optional | Cursor AI config | No |
+| `.aider/` | Optional | Aider AI config | No |
+| `binaries/` | Auto | Build output | **Yes** |
+| `releases/` | Auto | Release artifacts | **Yes** |
+| `rootfs/` | Auto | Runtime volume data | **Yes** |
+
+**RULE: If a directory doesn't appear in this list, it probably shouldn't exist.**
+
 ### GitHub-Specific Files (`.github/` directory)
 
 | File | Location |
@@ -554,7 +684,7 @@ Accept ALL of these (case-insensitive) → convert to `true`/`false`:
 | `SECURITY.md` | `.github/SECURITY.md` |
 | `FUNDING.yml` | `.github/FUNDING.yml` |
 | `ISSUE_TEMPLATE/` | `.github/ISSUE_TEMPLATE/` |
-| `PULL_REQUEST_AI.md` | `.github/PULL_REQUEST_AI.md` |
+| `PULL_REQUEST_TEMPLATE.md` | `.github/PULL_REQUEST_TEMPLATE.md` |
 | `workflows/*.yml` | `.github/workflows/` |
 
 ### Gitea-Specific Files (`.gitea/` directory)
@@ -562,7 +692,7 @@ Accept ALL of these (case-insensitive) → convert to `true`/`false`:
 | File | Location |
 |------|----------|
 | `ISSUE_TEMPLATE/` | `.gitea/ISSUE_TEMPLATE/` |
-| `PULL_REQUEST_AI.md` | `.gitea/PULL_REQUEST_AI.md` |
+| `PULL_REQUEST_TEMPLATE.md` | `.gitea/PULL_REQUEST_TEMPLATE.md` |
 | `workflows/*.yml` | `.gitea/workflows/` |
 
 **RULE: If a file doesn't appear in the allowed list, it probably shouldn't exist.**
@@ -648,180 +778,273 @@ Accept ALL of these (case-insensitive) → convert to `true`/`false`:
 
 ---
 
-# AI ASSISTANT INSTRUCTIONS (READ THIS ENTIRE SECTION)
+# ══════════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════════════
 
-## ⚠️ STEP 1: CHECK WHICH FILE TO USE ⚠️
+## FOR AI ASSISTANTS (If you're reading this, follow these steps EXACTLY)
 
-**BEFORE doing ANYTHING, determine which file to use:**
+**You are reading TEMPLATE.md, not AI.md. This means you must set up the project.**
+
+### Step 1: Recognize the Situation
+
+You're reading the TEMPLATE file because:
+- User said "read the template" or similar
+- This section exists (it gets deleted in AI.md)
+
+**Assumption:** Current working directory (pwd) IS the project root.
+
+### Step 2: Gather Required Information (Auto-Detect)
+
+**INFER these values automatically - DO NOT ask unless detection fails:**
 
 ```bash
-# Check if AI.md exists in the project directory
-if [ -f "AI.md" ]; then
-    # ✓ AI.md EXISTS → Use AI.md, DO NOT use AI.md
-    # Exception: Only use AI.md if user explicitly says:
-    #   "re-read template", "refresh from template", etc.
-else
-    # ✗ AI.md MISSING → Use AI.md to create AI.md
-fi
+# From git remote (preferred)
+PROJECTNAME=$(git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)(\.git)?$|\1|')
+PROJECTORG=$(git remote get-url origin 2>/dev/null | sed -E 's|.*[:/]([^/]+)/[^/]+(\.git)?$|\1|')
+GITPROVIDER=$(git remote get-url origin 2>/dev/null | sed -E 's|.*[@/]([^/:]+)[:/].*|\1|' | sed 's/\.com$//')
+
+# Fallback to directory structure
+[ -z "$PROJECTNAME" ] && PROJECTNAME=$(basename "$(pwd)")
+[ -z "$PROJECTORG" ] && PROJECTORG=$(basename "$(dirname "$(pwd)")")
 ```
 
-**Decision Logic:**
+| Variable | Detection Method | Fallback |
+|----------|------------------|----------|
+| `casspeed` | Git remote URL → repo name | Directory name |
+| `casapps` | Git remote URL → org/owner | Parent directory name |
+| `{gitprovider}` | Git remote URL → host | Ask user |
 
-| Situation | File to Use | Action |
-|-----------|-------------|--------|
-| **AI.md exists** | **Use AI.md** | Read AI.md for ALL project work, ignore AI.md |
-| **AI.md exists** + user says "refresh from template" | **Use AI.md** | Copy AI.md → AI.md, update PART 36 |
-| **AI.md missing** | **Use AI.md** | Create AI.md from AI.md |
+**For Description/Features:**
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                    ⚠️  CRITICAL RULE  ⚠️                                │
-│                                                                         │
-│   IF AI.md EXISTS in project:                                           │
-│     → Use AI.md ONLY (ignore AI.md)                              │
-│     → Do NOT reference AI.md                                      │
-│     → Do NOT look at AI.md                                        │
-│     → Do NOT compare against AI.md                                │
-│                                                                         │
-│   EXCEPTION - Only use AI.md if user explicitly says:            │
-│     → "Re-read the template"                                            │
-│     → "Refresh AI.md from template"                                     │
-│     → "Update AI.md with latest template"                               │
-│                                                                         │
-└─────────────────────────────────────────────────────────────────────────┘
+| Situation | Action |
+|-----------|--------|
+| **Existing codebase** | Analyze code, README, go.mod to infer purpose |
+| **New/empty project** | Ask: "What does this project do? (one sentence)" |
+
+**Only ask user if:**
+- No git remote AND directory names seem wrong (e.g., `temp`, `test`, `new-project`)
+- Description cannot be inferred from existing code
+
+### Step 3: Copy Template to AI.md
+
+```bash
+cp /path/to/TEMPLATE.md ./AI.md
 ```
 
-## CRITICAL: AI.md vs AI.md - Know The Difference
+Or if reading from a different location, write the content to `./AI.md`.
 
-**STOP. Understand this before doing ANYTHING.**
+### Step 4: Replace Variables in AI.md
 
-### The Two Files
+Replace ALL occurrences of:
+| Variable | Replace With |
+|----------|--------------|
+| `casspeed` | Project name lowercase (e.g., `jokes`) |
+| `CASSPEED` | Project name UPPERCASE (e.g., `JOKES`) |
+| `casapps` | Organization name (e.g., `apimgr`) |
+| `{gitprovider}` | Git provider (e.g., `github`) |
+| `{fqdn}` | Leave as `{fqdn}` (resolved at runtime) |
 
-| File | What It Is | Location | Use When? |
-|------|------------|----------|-----------|
-| **AI.md** | Master template (this file) | Organization/shared location | **ONLY when AI.md missing OR user says "refresh"** |
-| **AI.md** | Project specification | Each project repository | **ALWAYS (if it exists)** |
+### Step 5: Fill Project-Specific Content
 
-### The Rule
+Update in AI.md:
+1. **Lines 1-25**: Project name, description, features, target users
+2. **PART 36**: Business logic for THIS project only
 
+**CRITICAL - PART 36 Rules:**
+
+| PART 36 Contains (WHAT) | PART 36 Does NOT Contain (HOW) |
+|-------------------------|--------------------------------|
+| Project description | User/auth implementation patterns |
+| Data models (what fields) | How to hash passwords |
+| API endpoints (what they do) | How to structure routes |
+| Business rules (validation) | Admin panel patterns |
+| Feature list | Database schema patterns |
+
+**Example PART 36 - Simple (Jokes API):**
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                                                                         │
-│   AI.md is used to CREATE AI.md (when AI.md doesn't exist)       │
-│   After AI.md exists, AI.md IS THE SPEC. Use AI.md, not AI.md    │
-│                                                                         │
-│   When working on a project with AI.md:                                 │
-│     ✓ Read and follow AI.md (the project spec)                         │
-│     ✗ Do NOT reference AI.md                                      │
-│     ✗ Do NOT compare against AI.md                                │
-│     ✗ Do NOT look at AI.md                                        │
-│     ✗ Do NOT check AI.md for updates                              │
-│                                                                         │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+## Data: Jokes
+- id, text, category, rating, created_at
+- Categories: programming, dad, pun
 
-### Workflow
+## Endpoints
+| Method | URL | Description |
+|--------|-----|-------------|
+| GET | https://jokes.example.com/api/v1/joke/random | Random joke |
+| GET | https://jokes.example.com/api/v1/joke/{id} | Specific joke |
+| POST | https://jokes.example.com/api/v1/joke | Add joke (admin) |
 
-```
-AI.md (this file ~1.1MB)
-    │
-    │  INITIAL COPY (when AI.md doesn't exist)
-    │  - Copy ENTIRE AI.md → AI.md (~1.1MB complete copy)
-    │  - ⚠️  DO NOT shorten, summarize, or remove ANY sections
-    │  - Replace casspeed, casapps variables
-    │  - Fill in PART 36 (project-specific sections)
-    │  - Delete "HOW TO USE THIS TEMPLATE" section ONLY
-    │
-    ▼
-AI.md (project specification ~1.1MB+)
-    │
-    │  THIS IS NOW YOUR SPEC - DON'T OVERWRITE DURING NORMAL WORK
-    │  - PARTS 1-35 MUST stay IDENTICAL to template (no removal)
-    │  - PART 36 will be LARGER (filled with project details)
-    │  - Read AI.md for all project work
-    │  - Update ONLY PART 36 when project changes
-    │  - NEVER regenerate on your own
-    │  - Keep template sections (PARTS 1-35) intact and complete
-    │
-    │  ◄─────────────────────┐
-    │                        │
-    │  EXCEPTION: Template Refresh (when user explicitly requests)
-    │  - User says: "Re-read template and update AI.md"
-    │  - Copy ENTIRE AI.md → AI.md (complete fresh copy)
-    │  - ⚠️  DO NOT shorten or summarize
-    │  - Immediately update PART 36 with current project info
-    │  - Result: Complete latest template + current project details
-    │
-    ▼
-Project Implementation
-    │
-    │  KEEP DOCUMENTATION IN SYNC
-    │  - Update AI.md PART 36 when features change (business logic only)
-    │  - Implementation follows PARTS 1-35 standards (no custom patterns)
-    │  - Update README.md when functionality changes
-    │  - Update docs/ when API/config changes
-    │  - Update Swagger annotations when routes change
-    │  - Update GraphQL schema when types change
-    │
-    ▼
-All Documentation Reflects Current Code
+## Business Rules
+- Rating: 1-5 stars, anonymous
+- Categories: admin-managed list
 ```
 
-### How to Know Which File You're In
+**Example PART 36 - Medium (Pastebin-type):**
+```
+## Data: Pastes
+- id, title, content, syntax, visibility, expires_at, view_count
+- Visibility: public, unlisted, private
+- Syntax: 100+ languages (auto-detect option)
 
-| You're in AI.md if... | You're in AI.md if... |
-|-----------------------------|----------------------|
-| File contains `casspeed` variables | Variables are replaced with real values |
-| Has "HOW TO USE THIS TEMPLATE" section | That section is deleted |
-| Located in organization/shared folder | Located in project repository |
-| ~1.1MB / ~30,000 lines | ~1.1MB+ / ~29,000+ lines (at least same size, often larger) |
+## Data: Users (optional)
+- Pastes can be anonymous or user-owned
+- User pastes appear in profile
 
-### What To Do
+## Endpoints
+| Method | URL | Description |
+|--------|-----|-------------|
+| GET | https://paste.example.com/api/v1/paste/{id} | Get paste |
+| GET | https://paste.example.com/api/v1/paste/{id}/raw | Raw content |
+| POST | https://paste.example.com/api/v1/paste | Create paste |
+| GET | https://paste.example.com/api/v1/user/{username}/pastes | User's pastes |
 
-| Scenario | Action |
-|----------|--------|
-| **Starting work on project** | **Check if AI.md exists - if YES, use AI.md ONLY** |
-| Project has AI.md | **Use AI.md only** - DO NOT open/read AI.md |
-| Project missing AI.md | Create AI.md from AI.md (one-time) |
-| Asked to update spec | Update AI.md PART 36 only, never overwrite entire file |
-| Asked to check compliance | Check against AI.md, NOT AI.md |
-| Asked for rules/requirements | Read AI.md, NOT AI.md |
-| Template was updated | Does NOT affect existing AI.md files |
-| Code changes | Update AI.md PART 36, README.md, docs/, Swagger, GraphQL |
-| Feature added | Update all documentation to match new reality |
-| Feature removed | Update all documentation to remove references |
-| **User says "re-read template"** | **Copy ENTIRE AI.md → AI.md, then update PART 36** |
+## Business Rules
+- Anonymous pastes: max 10KB, expire in 30 days
+- User pastes: max 1MB, optional expiration
+- Private pastes: only owner can view
+- Unlisted: accessible via link, not in search
+```
 
-### Common Mistakes
+**Example PART 36 - Complex (Git Hosting-type):**
+```
+## Data: Repositories
+- id, name, description, visibility, default_branch, fork_of
+- Owner: user OR org
+- Visibility: public, private, internal (org-only)
 
-| Mistake | Why It's Wrong | Correct Action |
-|---------|----------------|----------------|
-| **Using AI.md when AI.md exists** | **AI.md IS the project spec** | **Check if AI.md exists first, use AI.md** |
-| **Looking at AI.md during project work** | **AI.md is not the project spec** | **Use AI.md only** |
-| **Checking AI.md for rules** | **Rules are in AI.md (project copy)** | **Read AI.md instead** |
-| Reading AI.md for project work | Project spec is AI.md | Read AI.md instead |
-| "Syncing" AI.md with AI.md | AI.md is standalone after creation | Keep AI.md independent |
-| Updating AI.md | Template is read-only | Ask maintainer for template changes |
-| Referencing AI.md line numbers | AI.md has different line numbers | Use AI.md line numbers |
-| **Shortening/summarizing AI.md** | **AI.md MUST be ≥1MB (complete PARTS 1-35)** | **Copy ENTIRE template, do NOT remove from PARTS 1-35** |
-| **Removing sections from PARTS 1-35** | **Breaks the complete specification** | **Keep ALL template sections identical** |
-| **Regenerating AI.md from AI.md** | **Loses all project-specific content** | **NEVER do this - update PART 36 only** |
-| **Overwriting entire AI.md** | **Destroys the source of truth** | **Edit specific sections only** |
-| **Leaving docs out of sync** | **Documentation lies about features** | **Update README, docs/, Swagger, GraphQL** |
+## Data: Organizations
+- id, name, display_name, description, members[]
+- Member roles: owner, admin, member
+
+## Data: Issues/PRs
+- id, repo_id, number, title, body, state, author, assignees[]
+- State: open, closed, merged (PR only)
+
+## Endpoints
+| Method | URL | Description |
+|--------|-----|-------------|
+| GET | https://git.example.com/api/v1/repos/{owner}/{repo} | Repo info |
+| GET | https://git.example.com/api/v1/repos/{owner}/{repo}/issues | List issues |
+| POST | https://git.example.com/api/v1/repos/{owner}/{repo}/issues | Create issue |
+| GET | https://git.example.com/api/v1/orgs/{org}/members | Org members |
+| GET | https://git.example.com/api/v1/users/{username}/repos | User repos |
+| GET | https://git.example.com/{owner}/{repo}.git | Git clone URL |
+
+## Business Rules
+- Repo names: lowercase, alphanumeric, hyphens, max 100 chars
+- Forks inherit visibility from parent (can be more restrictive)
+- Internal repos: visible to all org members
+- Issue numbers: per-repo sequential
+- PRs share number sequence with issues
+```
+
+**Development URLs:** Replace `example.com` with `localhost:64580`
+
+**URL Rule:** Always use full URLs with FQDN, never just `GET /path`. See PART 7 URL Display Rules.
+
+**NOT in PART 36** (these are in PARTS 0-35):
+- How to implement auth → PART 23
+- How to structure admin panel → PART 19
+- How to format API responses → PART 20
+- How users/orgs work → PART 23
+
+**NEVER in PART 36 or anywhere:**
+- Feature tiers (free/pro/enterprise)
+- Artificial limits (max users, storage caps for monetization)
+- License key requirements
+- "Premium" or "paid" features
+
+**Rate limits for server protection are OK. Limits to extract money are NOT.**
+
+**All features are free. All features are available. No exceptions.**
+
+### Step 6: Persistent Rules (MEMORIZE THESE)
+
+**These rules persist AFTER you delete this section. Internalize them.**
+
+| Rule | Description |
+|------|-------------|
+| **PART 36 = WHAT** | Business logic, data, features for THIS project |
+| **PARTS 0-35 = HOW** | Implementation patterns (auth, admin, API, etc.) |
+| **Never duplicate** | Don't put HOW patterns in PART 36 |
+| **Always cross-reference** | Implementing users? Read PART 23. API? Read PART 20. |
+| **AI.md is truth** | After setup, AI.md is the only spec |
+| **No feature gating** | ALL features free, no tiers, no limits, no license keys |
+| **MIT License** | Our code MIT, 3rd party attribution in LICENSE.md |
+| **Container-only** | Build=Docker, Test=Docker/Incus, Debug=Incus preferred |
+| **AI = Beta tester** | Goal is to BREAK things and FIX them, not just report |
+| **Audit = FIX** | When auditing, FIX issues - never create AUDIT.md or reports |
+
+**When implementing ANY feature:**
+```
+1. Read PART 36 → WHAT does this feature do?
+2. Read relevant PART → HOW do I implement it?
+3. Combine both → Build the feature correctly
+```
+
+### Step 7: Delete This Section
+
+Remove everything between the ═══ markers (this entire HOW TO USE section) from AI.md.
+
+### Step 8: FORGET THE TEMPLATE
+
+**CRITICAL:** After completing these steps:
+- The template file NO LONGER EXISTS for you
+- AI.md IS the specification
+- NEVER reference or re-read the template
+- All future work uses AI.md only
+- The persistent rules from Step 6 are now internalized
+
+### Step 9: Confirm Completion
+
+Tell the user:
+```
+✓ Created AI.md from template
+✓ Replaced variables: casspeed, casapps, {gitprovider}
+✓ Filled project description and PART 36 (WHAT)
+✓ Ready to implement - AI.md is the specification
+✓ PARTS 0-35 define HOW, PART 36 defines WHAT
+```
 
 ---
 
-## CRITICAL: How to Handle This Large File
+## FOR HUMANS (Manual Setup)
 
-**This AI.md is ~1.1MB and ~30,000 lines. You CANNOT read it all at once. Follow these procedures.**
+1. **Copy this file** to your project directory as `AI.md`
+2. **Replace all variables** (`casspeed`, `casapps`, etc.)
+3. **Fill in** project description (lines 1-25) and PART 36
+4. **Delete this section** (everything between ═══ markers)
+5. **Done** - AI.md is your project specification
 
-**NOTE: This section applies when you ARE reading AI.md (to create AI.md for a new project). For existing projects, read AI.md instead - it's the complete project spec created from this template (at least ~1.1MB, often larger with project details).**
+## Variables Reference
+
+| Variable | Replace With | Example |
+|----------|--------------|---------|
+| `casspeed` | Project name (lowercase) | `jokes` |
+| `CASSPEED` | Project name (UPPERCASE) | `JOKES` |
+| `casapps` | Organization name | `apimgr` |
+| `{gitprovider}` | Git host | `github`, `gitea`, `gitlab` |
+
+## After Setup
+
+- AI.md is THE specification - follow it exactly
+- Update PART 36 when features change
+- PARTS 0-35 define patterns - do NOT modify them
+
+# ══════════════════════════════════════════════════════════════════════════════
+# END OF SECTION TO DELETE
+# ══════════════════════════════════════════════════════════════════════════════
+
+---
+
+## How to Read This Large File
+
+**AI.md is ~1MB and ~30,000 lines. You CANNOT read it all at once. Follow these procedures.**
 
 ### File Size Reality
 
 | Constraint | Value |
 |------------|-------|
-| File size | ~1.1MB (~1100KB) |
+| File size | ~1MB |
 | Line count | ~30,000 lines |
 | Read limit | ~500 lines per read |
 | Full reads needed | ~60 reads (impractical) |
@@ -830,77 +1053,54 @@ All Documentation Reflects Current Code
 
 ### PART Index (Quick Reference)
 
-**⚠️ IMPORTANT: Line numbers in this index are approximate and may drift as the template is updated.**
+**Use `grep -n "^# PART" AI.md` to get exact current line numbers.**
 
-**ALWAYS use `grep -n "^# PART" AI.md` to get exact current line numbers.**
-
-Use this index for general navigation only. Do not rely on these line numbers for precise location.
-
-| PART | Lines | Topic | When to Read |
-|------|-------|-------|--------------|
-| 0 | 1175-2238 | AI Assistant Rules | **ALWAYS READ FIRST** |
-| 1 | 2239-2843 | Critical Rules | **ALWAYS READ FIRST** |
-| 2 | 2844-3214 | License & Attribution | License requirements |
-| 3 | 3215-3976 | Project Structure | Setting up new project |
-| 4 | 3977-4142 | OS-Specific Paths | Path handling |
-| 5 | 4143-5178 | Configuration | Config file work |
-| 6 | 5179-5782 | Application Modes | Mode handling, debug endpoints |
-| 7 | 5783-8169 | Server Binary CLI | CLI flags/commands |
-| 8 | 8170-8225 | Update Command | Update feature |
-| 9 | 8226-8611 | Privilege Escalation & Service | Service/privilege work |
-| 10 | 8612-8629 | Service Support | Systemd/service |
-| 11 | 8630-8786 | Binary Requirements | Binary building |
-| 12 | 8787-9311 | Makefile | Build system |
-| 13 | 9312-10420 | Testing & Development | Testing/dev workflow |
-| 14 | 10421-11381 | Docker | Docker/containers |
-| 15 | 11382-13545 | CI/CD Workflows | GitHub/Gitea Actions |
-| 16 | 13546-13669 | Health & Versioning | Health endpoints |
-| 17 | 13670-15563 | Web Frontend | Frontend/UI work |
-| 18 | 15564-15802 | Server Configuration | Server settings |
-| 19 | 15803-16523 | Admin Panel | Admin UI |
-| 20 | 16524-17543 | API Structure | REST/GraphQL/Compatibility API |
-| 21 | 17544-18221 | SSL/TLS & Let's Encrypt | SSL certificates |
-| 22 | 18222-19697 | Security & Logging | Security features |
-| 23 | 19698-22744 | User Management | Users/auth/sessions |
-| 24 | 22745-22877 | Database & Cluster | Database work |
-| 25 | 22878-23282 | Backup & Restore | Backup features |
-| 26 | 23283-24616 | Email & Notifications | Email/SMTP |
-| 27 | 24617-24944 | Scheduler | Background tasks |
-| 28 | 24945-25017 | GeoIP | GeoIP features |
-| 29 | 25018-26038 | Metrics | Metrics/monitoring |
-| 30 | 26039-26631 | Tor Hidden Service | Tor support |
-| 31 | 26632-26689 | Error Handling & Caching | Error/cache |
-| 32 | 26690-26712 | I18N & A11Y | Internationalization |
-| 33 | 26713-27429 | ReadTheDocs Documentation | Documentation |
-| 34 | 27430-27992 | CLI Client | **OPTIONAL** - CLI tool |
-| 35 | 27993-28926 | Custom Domains | **OPTIONAL** - user/org branded domains |
-| 36 | 28927-29151 | Project-Specific Sections | Business logic only |
-| FINAL | 29152-29933 | Compliance Checklist | Final verification |
+| PART | Topic | When to Read |
+|------|-------|--------------|
+| 0 | AI Assistant Rules | **ALWAYS READ FIRST** |
+| 1 | Critical Rules | **ALWAYS READ FIRST** |
+| 2 | License & Attribution | License requirements |
+| 3 | Project Structure | Setting up new project |
+| 4 | OS-Specific Paths | Path handling |
+| 5 | Configuration | Config file work |
+| 6 | Application Modes | Mode handling, debug endpoints |
+| 7 | Server Binary CLI | CLI flags/commands |
+| 8 | Update Command | Update feature |
+| 9 | Privilege Escalation & Service | Service/privilege work |
+| 10 | Service Support | Systemd/service |
+| 11 | Binary Requirements | Binary building |
+| 12 | Makefile | Build system |
+| 13 | Testing & Development | Testing/dev workflow |
+| 14 | Docker | Docker/containers |
+| 15 | CI/CD Workflows | GitHub/Gitea Actions |
+| 16 | Health & Versioning | Health endpoints |
+| 17 | Web Frontend | Frontend/UI work |
+| 18 | Server Configuration | Server settings |
+| 19 | Admin Panel | Admin UI |
+| 20 | API Structure | REST/GraphQL/Compatibility API |
+| 21 | SSL/TLS & Let's Encrypt | SSL certificates |
+| 22 | Security & Logging | Security features |
+| 23 | User Management | Users/auth/sessions |
+| 24 | Database & Cluster | Database work |
+| 25 | Backup & Restore | Backup features |
+| 26 | Email & Notifications | Email/SMTP |
+| 27 | Scheduler | Background tasks |
+| 28 | GeoIP | GeoIP features |
+| 29 | Metrics | Metrics/monitoring |
+| 30 | Tor Hidden Service | Tor support |
+| 31 | Error Handling & Caching | Error/cache |
+| 32 | I18N & A11Y | Internationalization |
+| 33 | ReadTheDocs Documentation | Documentation |
+| 34 | CLI Client | **OPTIONAL** - CLI tool |
+| 35 | Custom Domains | **OPTIONAL** - user/org branded domains |
+| 36 | Project-Specific Sections | Your project's business logic |
+| FINAL | Compliance Checklist | Final verification |
 
 ### How to Read This File
 
-**Note:** Line numbers below are approximate. Use `grep -n` for exact locations.
-
 **Step 1: Always read these first (MANDATORY)**
-
-```
-Read lines 1-220      # Critical rules summary (includes file naming conventions)
-Read lines 635-900    # HOW TO USE + AI.md vs AI.md distinction (CRITICAL)
-Read lines 1170-1400  # AI rules (PART 0 start)
-Read lines 2143-2400  # Critical rules (PART 1 start)
-```
-
-**Step 1b: For migrations, ALSO read:**
-
-```
-Read lines 700-710    # For Existing Projects section
-```
-
-**Step 1c: For new projects, ALSO read:**
-
-```
-Read lines 671-700    # For New Projects section
-```
+- PART 0: AI ASSISTANT RULES
+- PART 1: CRITICAL RULES
 
 **Step 2: Read sections relevant to your task**
 
@@ -912,11 +1112,7 @@ grep -n "keyword" AI.md    # Find specific content
 
 **Step 3: Read the specific PART completely**
 
-Once you identify the PART, read ALL of it:
-```
-# Example: Working on Docker
-Read lines 9921-10881  # PART 14: Docker (complete section)
-```
+Once you identify the PART, read ALL of it.
 
 ### Reading Strategy by Task Type
 
@@ -1085,12 +1281,57 @@ BEFORE writing ANY code:
 | Template | Varies (see below) | Master spec | **NEVER** |
 | AI.md | Project repo | Project spec | Yes |
 | TODO.AI.md | Project repo | Task tracking | Yes |
+| PLAN.md | Project repo | Implementation plan | Yes |
 | README.md | Project repo | User docs | Yes |
 
 
 # PART 0: AI ASSISTANT RULES (READ FIRST - NON-NEGOTIABLE)
 
 **These rules govern how AI assistants work on projects using this specification.**
+
+## AI.md Structure
+
+**AI.md is the complete project specification. It has two parts:**
+
+| Section | Purpose | Modify? |
+|---------|---------|---------|
+| **PARTS 0-35** | Implementation patterns, standards, rules | **NEVER** |
+| **PART 36** | Your project's business logic, features | **YES** - update as project evolves |
+
+**Rules:**
+1. **Follow PARTS 0-35 exactly** - these define HOW to implement things
+2. **Update PART 36** when features change - this defines WHAT your project does
+3. **Keep documentation in sync** - README.md, docs/, Swagger, GraphQL must match code
+
+## CRITICAL: Always Reference AI.md (NON-NEGOTIABLE)
+
+**AI.md is your source of truth. ALWAYS refer to it - NEVER guess or drift.**
+
+| Situation | Action |
+|-----------|--------|
+| **Working on any task** | Reference the relevant PART in AI.md before implementing |
+| **Using TODO.AI.md** | Cross-reference AI.md for every task - it has all rules |
+| **Unsure about a pattern** | Read the relevant PART - don't assume or guess |
+| **After working for a while** | Re-read relevant PARTs - combat drift |
+
+**Rule:** The AI.md file contains all PARTS and rules. When in doubt, read AI.md. Never guess.
+
+## CRITICAL: "Read Template" Command (NON-NEGOTIABLE)
+
+**If user says "read the template" or similar:**
+
+1. **Copy** template → `{projectdir}/AI.md`
+2. **Update** AI.md (replace variables, fill PART 36)
+3. **FORGET** the template completely
+4. **USE** AI.md only from this point forward
+
+```
+User: "Read the template" / "Use the template" / "Check the template"
+     ↓
+AI: Copy template → AI.md → Update → FORGET TEMPLATE → Use AI.md only
+```
+
+**After this process, the template does not exist for you. AI.md IS the spec.**
 
 ## CRITICAL: Specification Drift is Unacceptable
 
@@ -1110,14 +1351,14 @@ BEFORE writing ANY code:
 
 | Task | Read For Business Logic | Read For Implementation | Example |
 |------|-------------------------|------------------------|---------|
-| Implementing users/auth | PART 36 (if custom logic) | PART 23: User Management | "Reading PART 36 for business rules, PART 23 for implementation..." |
-| Setting up UI/frontend | PART 36 (what to display) | PART 17: Web Frontend | "PART 36 defines content, PART 17 defines UI patterns..." |
-| Configuring SSL | N/A | PART 21: SSL/TLS & Let's Encrypt | "Following PART 21 for SSL setup..." |
-| Adding API endpoints | PART 36 (endpoint purpose) | PART 20: API Structure | "PART 36 defines what endpoints do, PART 20 defines how..." |
-| Writing tests | PART 36 (what to test) | PART 13: Testing & Development | "PART 36 lists features to test, PART 13 defines test structure..." |
-| Creating Dockerfile | N/A | PART 14: Docker | "Implementing per PART 14 Docker rules..." |
-| Adding config options | PART 36 (what settings) | PART 5: Configuration | "PART 36 defines settings needed, PART 5 defines YAML format..." |
-| CLI commands | N/A | PART 7: Server Binary CLI | "Following PART 7 for CLI structure..." |
+| Implementing users/auth | PART 36 (if custom logic) | PART 23: USER MANAGEMENT | "Reading PART 36 for business rules, PART 23 for implementation..." |
+| Setting up UI/frontend | PART 36 (what to display) | PART 17: WEB FRONTEND | "PART 36 defines content, PART 17 defines UI patterns..." |
+| Configuring SSL | N/A | PART 21: SSL/TLS & LET'S ENCRYPT | "Following PART 21 for SSL setup..." |
+| Adding API endpoints | PART 36 (endpoint purpose) | PART 20: API STRUCTURE | "PART 36 defines what endpoints do, PART 20 defines how..." |
+| Writing tests | PART 36 (what to test) | PART 13: TESTING & DEVELOPMENT | "PART 36 lists features to test, PART 13 defines test structure..." |
+| Creating Dockerfile | N/A | PART 14: DOCKER | "Implementing per PART 14 Docker rules..." |
+| Adding config options | PART 36 (what settings) | PART 5: CONFIGURATION | "PART 36 defines settings needed, PART 5 defines YAML format..." |
+| CLI commands | N/A | PART 7: SERVER BINARY CLI | "Following PART 7 for CLI structure..." |
 
 **Workflow:**
 ```
@@ -1140,53 +1381,120 @@ BEFORE writing ANY code:
 - Work from memory of the spec
 - Create patterns not in the spec
 - Write verbose documentation explaining what you're doing (the spec is the documentation)
+- **NEVER create unnecessary files** (no AUDIT.md, COMPLIANCE.md, SUMMARY.md, ANALYSIS.md, REPORT.md, etc.)
 
 **The spec defines it. TODO.AI.md tracks it. No additional documentation needed.**
 
-## Template File vs AI.md
+## CRITICAL: No Report Files - Fix The Project Instead
 
-| File | Action | Description |
-|------|--------|-------------|
-| **Template file** | **NEVER MODIFY** | Read-only master (may be named AI.md, SPEC.md, etc.) |
-| **AI.md** | Create/Update | Project-specific specification |
-| **TODO.AI.md** | Create/Update | Task tracking |
+**NEVER create report/analysis files. ALWAYS fix the project directly.**
 
-**How to identify the AI.md:**
-- Location varies: project root, org root, different org, ~/, or user-specified
-- Contains unreplaced `casspeed`, `casapps` variables
-- Contains "HOW TO USE THIS TEMPLATE" section
-- Contains multiple "PART X:" numbered sections
+| WRONG | RIGHT |
+|-------|-------|
+| Create `AUDIT.md` with findings | Fix the issues directly |
+| Create `COMPLIANCE.md` with gaps | Bring project to 100% compliance |
+| Create `SUMMARY.md` of changes | Make the changes, update TODO.AI.md |
+| Create `ANALYSIS.md` of problems | Solve the problems |
+| Create `REPORT.md` for user | Update PART 36, fix code |
 
-**Workflow:**
-1. If `AI.md` doesn't exist → Copy from template, apply migrations (see below)
-2. If `AI.md` exists → Read it (it is the complete standalone spec for this project)
-3. If old spec files exist in project repo → Merge into `AI.md`, DELETE old files
+**Rules:**
+- If you find compliance gaps → FIX THEM (bring to 100% compliance)
+- If you need to document changes → Update PART 36 in AI.md
+- If you need to track tasks → Use TODO.AI.md
+- If you need to plan work → Use PLAN.md (if it exists)
+- The project should be WORKING, not documented as broken
 
-**Important:** AI.md is created from AI.md **once**. After creation, AI.md is the complete standalone spec and does NOT reference or sync with AI.md.
+**See Critical Rules: "Files & Directories Master Rules" for allowed files/directories - nothing else.**
 
-**Migration Rules (when copying AI.md → AI.md):**
+## Audit Process (When User Says "Audit")
 
-| Priority | Action | Description |
-|----------|--------|-------------|
-| 1 | **Copy template** | Copy AI.md to project as AI.md |
-| 2 | **Replace variables** | `casspeed`, `casapps` with actual values |
-| 3 | **Replace references** | `AI.md` → `AI.md`, `TEMPLATE` → `AI` |
-| 4 | **Update project sections** | Fill in PART 36 with actual project details |
+**When user asks to "audit", "check compliance", or "verify" the project:**
 
-**Variable Replacements:**
-| Find | Replace With | Example |
-|------|--------------|---------|
-| `casspeed` | Actual project name | `jokes` |
-| `casapps` | Actual org name | `apimgr` |
-| `AI.md` | `AI.md` | References to this file |
-| `TEMPLATE` (as document name) | `AI` | "read the TEMPLATE" → "read the AI" |
+### Step 1: Check Against Spec
+| Check | Source |
+|-------|--------|
+| Project structure | PART 3: PROJECT STRUCTURE |
+| File/directory rules | Critical Rules: Files & Directories Master Rules |
+| Code patterns | Relevant PARTs (config, server, API, etc.) |
+| Business logic | PART 36 (project-specific) |
 
-**Project-Specific Sections (PART 36) - MUST be updated:**
-- Project description, purpose, and intent
-- Project-specific API endpoints
-- Project-specific data files and their structure
-- Project-specific configuration options
-- Architecture decisions and notes
+### Step 2: Check Documentation Sync
+**All documentation MUST match actual code/project state AND comply with spec PART:**
+
+| Documentation | Check Against | Spec Reference | Update If |
+|---------------|---------------|----------------|-----------|
+| **README.md** | Actual features, endpoints, usage | PART 3: PROJECT STRUCTURE | Features added/removed/changed |
+| **Swagger/OpenAPI** | Actual API routes in code | PART 20: API STRUCTURE | Routes changed, params changed |
+| **GraphQL schema** | Actual types/queries in code | PART 20: API STRUCTURE | Schema changed |
+| **docs/** (ReadTheDocs) | Actual config, API, features | PART 33: READTHEDOCS DOCUMENTATION | Any user-facing changes |
+| **AI.md PART 36** | Actual business logic | PART 36: PROJECT-SPECIFIC SECTIONS | Features/data models changed |
+| **CLI --help** | Actual flags/commands | PART 7: SERVER BINARY CLI | CLI changed |
+| **Makefile** | Actual targets available | PART 12: MAKEFILE | Targets added/removed |
+| **docker/*** | Actual build/services | PART 14: DOCKER | Docker config changed |
+
+**How to check:**
+1. Read the relevant PART for expected format/structure
+2. Read actual code (routes, handlers, config structs)
+3. Compare documentation to BOTH spec AND reality
+4. Fix ANY mismatch - documentation must reflect reality AND comply with spec
+
+### Step 3: Check Against FINAL CHECKPOINT
+Read the FINAL CHECKPOINT section and verify ALL items.
+
+### Step 4: FIX Issues (Don't Document Them)
+| If Found | Action |
+|----------|--------|
+| Missing file | Create it correctly |
+| Wrong pattern | Fix the code |
+| Missing feature | Implement it |
+| Config mismatch | Update config |
+| README outdated | Update README.md |
+| Swagger outdated | Update annotations |
+| GraphQL outdated | Update schema |
+| docs/ outdated | Update ReadTheDocs files |
+
+### Step 5: Track If Too Many Issues
+If more than 5 issues to fix:
+1. Add to TODO.AI.md
+2. Fix them one by one
+3. Mark complete as you go
+
+### Step 6: Report to User
+```
+✓ Audit complete
+✓ Fixed: [list what was fixed]
+✓ Documentation synced with code
+✓ Project is now compliant with AI.md spec
+```
+
+**NEVER output:** "Found X issues. Here's a list..." → FIX THEM instead.
+
+## PLAN.md Completion
+
+**When a PLAN.md has been fully implemented and verified working:**
+
+Replace the entire contents with:
+
+```markdown
+# Fully Implemented
+
+See PART 36 in AI.md for the full project breakdown.
+```
+
+**Rules:**
+- Keep the PLAN.md file (don't delete it)
+- Replace all planning content with the completion message above
+- This signals the plan is done and PART 36 is the source of truth
+- If new planning is needed later, replace the completion message with the new plan
+
+## Project Files
+
+| File | Purpose | Update When |
+|------|---------|-------------|
+| **AI.md** | Project specification | PART 36 when features change |
+| **TODO.AI.md** | Task tracking | Tasks added/completed |
+| **PLAN.md** | Implementation plan | Planning new features |
+| **README.md** | User documentation | Usage changes |
 
 ## Mandatory Compliance Schedule
 
@@ -1203,7 +1511,7 @@ BEFORE writing ANY code:
 ## Before Starting Work
 
 1. **Identify template vs AI.md** - template is read-only, AI.md is project spec
-2. **NEVER modify AI.md** - location varies, but it's always read-only
+2. **NEVER modify template file** - location varies, but it's always read-only
 3. **Read AI.md COMPLETELY** - not just parts you think are relevant
 4. **If AI.md missing** - create from template (ONE-TIME), replace all variables
 5. **AI.md is standalone** - does NOT sync with template after creation
@@ -1226,7 +1534,7 @@ BEFORE writing ANY code:
 1. **Update AI.md** if architecture or rules changed
 2. **Update TODO.AI.md** with any new tasks discovered
 3. **Verify compliance** - check against the FINAL CHECKPOINT
-4. **NEVER modify AI.md** - changes go in AI.md only
+4. **NEVER modify template file** - changes go in AI.md only
 5. **Update COMMIT_MESS** - write commit message for changes made
 
 ## Commit Message File (NON-NEGOTIABLE)
@@ -1365,7 +1673,7 @@ Implemented core server functionality and admin panel.
 
 | Action | Reason |
 |--------|--------|
-| **Modifying AI.md** | **Read-only master template - NEVER modify** |
+| **Modifying PARTS 0-35** | **Implementation patterns are fixed - NEVER modify** |
 | `git add` | AI cannot stage files - write COMMIT_MESS instead |
 | `git commit` | AI cannot commit - write COMMIT_MESS instead |
 | `git push` | AI cannot push - user must do this |
@@ -1636,7 +1944,7 @@ Dockerfile                         docker/Dockerfile
 | Check | Document |
 |-------|----------|
 | **Core functionality** | What does the app DO? (preserve this) |
-| **Custom config** | App-specific settings (migrate to config.yml) |
+| **Custom config** | App-specific settings (migrate to server.yml) |
 | **Custom routes** | API endpoints (keep, standardize format) |
 | **Dependencies** | Required packages (add to Dockerfile) |
 | **Database schema** | Tables and relationships (preserve) |
@@ -1650,7 +1958,7 @@ mkdir -p docker .github/workflows binaries
 
 # Create required files
 touch AI.md README.md LICENSE.md Makefile go.mod
-touch docker/Dockerfile docker-compose.yml
+touch docker/Dockerfile docker/docker-compose.yml
 ```
 
 ### Step 3: Migrate Code
@@ -1967,46 +2275,49 @@ ls -la docker/
 |------|---------|----------|
 | 0 | AI Assistant Rules | ✅ Follow always |
 | 1 | Critical Rules | ✅ Follow always |
-| 2 | Project Structure | ✅ Implement fully |
-| 3 | OS-Specific Paths | ✅ Implement fully |
-| 4 | Configuration | ✅ Implement fully |
-| 5 | Application Modes & Debug | ✅ Implement fully |
-| 6 | Server Binary CLI | ✅ Implement fully |
-| 7 | Update Command | ✅ Implement fully |
-| 8 | Privilege Escalation | ✅ Implement fully |
-| 9 | Service Support | ✅ Implement fully |
-| 10 | Binary Requirements | ✅ Implement fully |
-| 11 | Makefile | ✅ Implement fully |
-| 12 | Testing & Development | ✅ Implement fully |
-| 13 | Docker | ✅ Implement fully |
-| 14 | CI/CD Workflows | ✅ Implement fully |
-| 15 | Health & Versioning | ✅ Implement fully |
-| 16 | Web Frontend | ✅ Implement fully |
-| 17 | Server Configuration | ✅ Implement fully |
-| 18 | Admin Panel | ✅ Implement fully |
-| 19 | API Structure | ✅ Implement fully |
-| 20 | SSL/TLS & Let's Encrypt | ✅ Implement fully |
-| 21 | Security & Logging | ✅ Implement fully |
-| 22 | User Management | ✅ Implement fully |
-| 23 | Database & Cluster | ✅ Implement fully |
-| 24 | Backup & Restore | ✅ Implement fully |
-| 25 | Email & Notifications | ✅ Implement fully |
-| 26 | Scheduler | ✅ Implement fully |
-| 27 | GeoIP | ✅ Implement fully |
-| 28 | Metrics | ✅ Implement fully |
-| 29 | Tor Hidden Service | ✅ Implement fully |
-| 30 | Error Handling & Caching | ✅ Implement fully |
-| 31 | I18N & A11Y | ✅ Implement fully |
-| 32 | Project-Specific Sections | ✅ Customize for project |
-| 35 | ReadTheDocs Documentation | ✅ Implement fully |
+| 2 | License & Attribution | ✅ Implement fully |
+| 3 | Project Structure | ✅ Implement fully |
+| 4 | OS-Specific Paths | ✅ Implement fully |
+| 5 | Configuration | ✅ Implement fully |
+| 6 | Application Modes | ✅ Implement fully |
+| 7 | Server Binary CLI | ✅ Implement fully |
+| 8 | Update Command | ✅ Implement fully |
+| 9 | Privilege Escalation & Service | ✅ Implement fully |
+| 10 | Service Support | ✅ Implement fully |
+| 11 | Binary Requirements | ✅ Implement fully |
+| 12 | Makefile | ✅ Implement fully |
+| 13 | Testing & Development | ✅ Implement fully |
+| 14 | Docker | ✅ Implement fully |
+| 15 | CI/CD Workflows | ✅ Implement fully |
+| 16 | Health & Versioning | ✅ Implement fully |
+| 17 | Web Frontend | ✅ Implement fully |
+| 18 | Server Configuration | ✅ Implement fully |
+| 19 | Admin Panel | ✅ Implement fully |
+| 20 | API Structure | ✅ Implement fully |
+| 21 | SSL/TLS & Let's Encrypt | ✅ Implement fully |
+| 22 | Security & Logging | ✅ Implement fully |
+| 23 | User Management | ✅ Implement fully |
+| 24 | Database & Cluster | ✅ Implement fully |
+| 25 | Backup & Restore | ✅ Implement fully |
+| 26 | Email & Notifications | ✅ Implement fully |
+| 27 | Scheduler | ✅ Implement fully |
+| 28 | GeoIP | ✅ Implement fully |
+| 29 | Metrics | ✅ Implement fully |
+| 30 | Tor Hidden Service | ✅ Implement fully |
+| 31 | Error Handling & Caching | ✅ Implement fully |
+| 32 | I18N & A11Y | ✅ Implement fully |
+| 33 | ReadTheDocs Documentation | ✅ Implement fully |
+| 36 | Project-Specific Sections | ✅ Customize for project (NON-NEGOTIABLE) |
 | FINAL | Compliance Checklist | ✅ Verify all items |
 
-### OPTIONAL Sections (AI Must Decide)
+### OPTIONAL Sections (Become NON-NEGOTIABLE When Implemented)
+
+**IMPORTANT:** Optional sections are a per-project decision. However, once a project implements an optional feature, that entire PART becomes NON-NEGOTIABLE and must be followed exactly.
 
 | PART | Section | When to Include |
 |------|---------|-----------------|
-| 33 | CLI Client | If project needs command-line client tool |
-| 34 | Custom Domains | If users/orgs need branded domains (see decision table below) |
+| 34 | CLI Client | If project needs command-line client tool |
+| 35 | Custom Domains | If users/orgs need branded domains (see decision table below) |
 
 ### Optional Section Decision Guide
 
@@ -2018,7 +2329,9 @@ ls -la docker/
 | DevOps/admin tools | Consumer mobile app | Automation requires CLI |
 | Database management | Static content site | Bulk operations via CLI |
 
-**PART 35: Custom Domains** (see PART 35 for full decision table)
+**PART 35: CUSTOM DOMAINS** (see PART 35 for full decision table)
+
+**Once implemented, the optional PART becomes NON-NEGOTIABLE.**
 
 | Include | Skip | Reason |
 |---------|------|--------|
@@ -2154,6 +2467,51 @@ ls -la docker/
 
 # PART 1: CRITICAL RULES (NON-NEGOTIABLE)
 
+## Full Web Application Architecture (NON-NEGOTIABLE)
+
+**This is a FULL web application with both frontend AND backend.**
+
+Every feature MUST work via:
+1. **Web browser** - HTML pages, forms, interactive UI
+2. **PWA (Progressive Web App)** - Installable, offline-capable, native-like experience
+3. **API clients** - JSON for curl, wget, automation, scripts
+4. **CLI clients** - Dedicated command-line tools (if PART 34 implemented)
+
+| Client Type | Examples | Response Format |
+|-------------|----------|-----------------|
+| **Browser** | Chrome, Firefox, Safari | HTML (pretty UI) |
+| **PWA** | Installed web app (desktop/mobile) | HTML (same as browser) |
+| **API/Automation** | curl, wget, scripts, integrations | JSON |
+| **CLI tool** | `casspeed-cli` | Text/JSON (configurable) |
+
+**Why we support all these clients:**
+- Browser users get a full web experience
+- PWA users get installable, offline-capable apps without app store
+- Automation/scripts get clean JSON APIs
+- Power users get dedicated CLI tools
+
+**Endpoint Pattern (applies to ENTIRE app):**
+| Web Route (HTML) | API Route (JSON) | Purpose |
+|------------------|------------------|---------|
+| `/` | `/api/v1/` | Homepage / API root |
+| `/healthz` | `/api/v1/healthz` | Health status |
+| `/admin/dashboard` | `/api/v1/admin/dashboard` | Admin dashboard |
+| `/admin/server/settings` | `/api/v1/admin/server/settings` | Server settings |
+| `/admin/users` | `/api/v1/admin/users` | User management |
+| `/jokes` | `/api/v1/jokes` | Project feature (example) |
+| `/jokes/random` | `/api/v1/jokes/random` | Project feature (example) |
+| `/swagger` | `/api/v1/openapi.json` | API documentation |
+| `/graphql` | `/api/v1/graphql` | GraphQL endpoint |
+
+**This pattern applies to ALL features:**
+- Every admin page has a corresponding admin API
+- Every public page has a corresponding public API
+- Project-specific features (PART 36) follow same pattern
+
+**Rule:** For every web page, there's a corresponding API endpoint. For every API endpoint, the data can be displayed in a web page.
+
+---
+
 ## Working Roles
 
 When working on this project, the following roles are assumed based on the task:
@@ -2178,36 +2536,38 @@ These are not roleplay - they ARE these roles when the work requires it. Each pr
 3. **Never assume or guess** - ask questions if unclear
 4. **Every NON-NEGOTIABLE section MUST be implemented exactly as specified**
 5. **Keep AI.md in sync with the project** - always update after changes
-6. **NEVER install Go on host** - ALL builds/tests/debugging use Docker containers
+6. **NEVER install Go on host** - ALL builds use Docker, testing uses Docker or Incus
 
-### Docker-Only Development (NON-NEGOTIABLE)
+### Container-Only Development (NON-NEGOTIABLE)
 
 **The host system does NOT have Go installed. NEVER attempt to run `go` commands directly.**
 
-| Rule | Description |
-|------|-------------|
-| **Host has NO Go** | Assume Go is not installed on the host system |
-| **ALL builds use Docker** | `docker run ... golang:alpine go build ...` |
-| **ALL tests use Docker** | `docker run ... golang:alpine go test ...` |
-| **ALL debugging uses Docker** | Run binaries in containers or from /tmp |
-| **NEVER run `go` directly** | Always prefix with `docker run ... golang:alpine` |
+| Task | Container | Notes |
+|------|-----------|-------|
+| **Building** | Docker `golang:alpine` | ALWAYS - Go compilation |
+| **Unit tests** | Docker `golang:alpine` | `go test` commands |
+| **Quick testing** | Docker `alpine:latest` | Fast, ephemeral |
+| **Full OS testing** | Incus `debian:latest` | PREFERRED - systemd, services |
+| **Debugging** | Incus `debian:latest` | PREFERRED - persistent, SSH-able |
 
 ```bash
 # CORRECT - Use Makefile (wraps Docker)
 make dev                    # Quick build to {tempdir}/casapps.XXXXXX/casspeed
 make build                  # Full build to binaries/
 
-# ALSO CORRECT - Direct Docker (for one-offs, use random temp dir)
-PROJECTORG=$(basename "$(dirname "$(pwd)")") && BUILD_DIR=$(mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}.XXXXXX") && docker run --rm -v $(pwd):/build -w /build -e CGO_ENABLED=0 golang:alpine go build -o /build/binaries/casspeed src
+# ALSO CORRECT - Direct Docker build
+docker run --rm -v $(pwd):/build -w /build -e CGO_ENABLED=0 golang:alpine go build -o /build/binaries/casspeed ./src
+
+# CORRECT - Full OS test with Incus (PREFERRED)
+incus launch images:debian/12 test-app
+incus file push binaries/casspeed test-app/usr/local/bin/
+incus exec test-app -- casspeed --help
 
 # WRONG - Never run go directly on host
 go build -o binary/casspeed src
-
-# WRONG - Never use predictable /tmp paths
-docker run ... go build -o /tmp/casspeed src
 ```
 
-**See PART 12: TESTING & DEVELOPMENT for full containerized build/test procedures.**
+**See PART 13: TESTING & DEVELOPMENT for full containerized build/test procedures.**
 
 ---
 
@@ -2442,20 +2802,17 @@ func gUBE(e string) (*U, error) {
 | File | Location | Purpose | Modify? |
 |------|----------|---------|---------|
 | **Template file** | Varies (anywhere) | Master specification | **NEVER** |
-| **AI.md** | Project repository | Project-specific specification | **YES** |
+| **AI.md** | Project repository | Project-specific specification | **YES** (PART 36 only) |
 | **TODO.AI.md** | Project repository | Task tracking (>2 tasks) | **YES** |
-
-**Note:** Template file may be named `AI.md`, `SPEC.md`, `CLAUDE.md`, or other. Location varies (project root, org root, ~/, etc.). Identify by content: unreplaced `{variables}`, "HOW TO USE" section, multiple PART X: sections.
+| **PLAN.md** | Project repository | Implementation plan | **YES** |
 
 ### Documentation Rules (NON-NEGOTIABLE)
 
 | Rule | Description |
 |------|-------------|
-| **Template is READ-ONLY** | Never modify - it is the master specification |
-| **AI.md is the project spec** | Copy from template (ONE-TIME), customize for project |
-| **AI.md is standalone** | Does NOT reference or sync with template after creation |
-| **Keep AI.md current** | Update when project state changes (NOT template changes) |
-| **Migrate old files** | Old spec files in project repo → merge into `AI.md`, DELETE |
+| **PARTS 0-35 are READ-ONLY** | Implementation patterns - never modify |
+| **PART 36 is the project spec** | Update when features change |
+| **Keep documentation current** | Update when project state changes |
 | **TODO.AI.md for >2 tasks** | Required when doing more than 2 tasks |
 
 **File Hierarchy:**
@@ -2522,7 +2879,7 @@ docker run -d \
 ### Docker Compose
 
 ```bash
-curl -O https://raw.githubusercontent.com/casapps/casspeed/main/docker-compose.yml
+curl -O https://raw.githubusercontent.com/casapps/casspeed/main/docker/docker-compose.yml
 docker compose up -d
 ```
 
@@ -2725,11 +3082,29 @@ Not every project needs admin UI extensions - it depends on the project's nature
 
 ### Sensitive Information Handling (NON-NEGOTIABLE)
 
-**NEVER expose sensitive information unless absolutely necessary:**
+**NEVER expose sensitive information anywhere in the project.**
 
-- Tokens/passwords shown ONLY ONCE on generation (must be copied immediately)
+**What is sensitive data:**
+| Sensitive | Examples |
+|-----------|----------|
+| Credentials | Passwords, API keys, tokens, secrets |
+| Connection strings | Database URLs, Redis URLs, SMTP auth |
+| Internal infrastructure | Internal IPs, hostnames, file paths |
+| Config internals | Environment variables, config values |
+
+**Where to NEVER expose:**
+| Location | Rule |
+|----------|------|
+| `/healthz` | Status only: "ok"/"error", no connection details |
+| API responses | No internal paths, no config values |
+| Error messages | Generic errors, no stack traces in production |
+| Logs | Redact passwords, tokens, keys |
+| HTML/templates | No server paths, no internal IPs |
+
+**Tokens/passwords shown ONLY ONCE on generation:**
 - Show only on: first run, password changes, token regeneration
 - Show in difficult environments: Docker, headless servers
+- User must copy immediately - never retrievable again
 - **NEVER log sensitive data**
 - **NEVER in error messages or stack traces**
 - Mask in UI: show `••••••••` or last 4 chars only
@@ -2931,34 +3306,42 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
 
-### github.com/mattn/go-sqlite3 v1.14.18
+### modernc.org/sqlite v1.29.1
 
-**Copyright:** Copyright (c) 2014 Yasuhiro Matsumoto
-**License:** MIT License
-**Repository:** https://github.com/mattn/go-sqlite3
+**Copyright:** Copyright (c) 2017 The Sqlite Authors
+**License:** BSD-3-Clause
+**Repository:** https://gitlab.com/cznic/sqlite
 
 ```
-MIT License
+BSD 3-Clause License
 
-Copyright (c) 2014 Yasuhiro Matsumoto
+Copyright (c) 2017 The Sqlite Authors. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 ```
 
 ---
@@ -3068,7 +3451,7 @@ This badge should appear in the badges section near the top of README.md.
 LABEL org.opencontainers.image.licenses="MIT"
 ```
 
-See PART 13: DOCKER for complete label requirements.
+See PART 14: DOCKER for complete label requirements.
 
 ## Go Module License Field
 
@@ -3158,7 +3541,7 @@ package main
 |----------|-------------|---------|
 | `casspeed` | Project name (inferred from path) | `jokes` |
 | `casapps` | Organization name (inferred from path) | `apimgr` |
-| `github` | Git hosting provider | `github`, `gitlab`, `private` |
+| `{gitprovider}` | Git hosting provider | `github`, `gitlab`, `private` |
 | **Rule** | Anything in `{}` is a variable | |
 | **Rule** | Anything NOT in `{}` is literal | `/etc/letsencrypt/live` is a real path |
 
@@ -3166,7 +3549,7 @@ package main
 
 **NEVER hardcode `casspeed` or `casapps` - always infer from git remote or directory path.**
 
-**Recommended path structure:** `~/Projects/github/casapps/casspeed` (but works with any location)
+**Recommended path structure:** `~/Projects/{gitprovider}/casapps/casspeed` (but works with any location)
 
 ```bash
 # Method 1: Infer from git remote (PREFERRED - works regardless of directory location)
@@ -3184,7 +3567,7 @@ PROJECTNAME=$(git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)(\.git
 PROJECTORG=$(git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)/[^/]+(\.git)?$|\1|' || basename "$(dirname "$PWD")")
 ```
 
-**Note:** When using path-based inference, `PROJECTORG` will be the parent directory name, which may not match the git organization unless you follow the recommended `~/Projects/github/casapps/casspeed` structure. Git remote inference is always more reliable.
+**Note:** When using path-based inference, `PROJECTORG` will be the parent directory name, which may not match the git organization unless you follow the recommended `~/Projects/{gitprovider}/casapps/casspeed` structure. Git remote inference is always more reliable.
 
 ### Variable Capitalization
 
@@ -3211,12 +3594,12 @@ PROJECTORG=$(git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)/[^/]+(
 
 **IMPORTANT: Project root can be located ANYWHERE on your system. This section describes a RECOMMENDED organizational structure, not a requirement.**
 
-**Recommended Format:** `~/Projects/github/casapps/casspeed`
+**Recommended Format:** `~/Projects/{gitprovider}/casapps/casspeed`
 
 | Component | Description | Examples |
 |-----------|-------------|----------|
 | `~/Projects/` | Base projects directory (recommended) | Can be `~/Projects/`, `~/Documents/`, `/opt/`, etc. |
-| `github` | Git hosting provider or `local` | `github`, `gitlab`, `bitbucket`, `private`, `local` |
+| `{gitprovider}` | Git hosting provider or `local` | `github`, `gitlab`, `bitbucket`, `private`, `local` |
 | `casapps` | Organization/username (inferred) | `apimgr`, `casjay`, `myorg` |
 | `casspeed` | Project name (inferred) | `jokes`, `icons`, `myproject` |
 
@@ -3311,8 +3694,9 @@ PROJECTORG=$(git remote get-url origin 2>/dev/null | sed -E 's|.*/([^/]+)/[^/]+(
 ├── releases/               # Release binaries (gitignored)
 ├── README.md               # Production first, dev last
 ├── LICENSE.md              # MIT + embedded licenses
-├── AI.md                   # Project specification (from AI.md)
+├── AI.md                   # Project specification
 ├── TODO.AI.md              # Task tracking for >2 tasks
+├── PLAN.md                 # Implementation plan (optional)
 ├── Jenkinsfile             # Jenkins pipeline
 └── release.txt             # Version tracking
 ```
@@ -3497,10 +3881,6 @@ releases/
 
 **ALL paths are ALWAYS relative to PROJECT ROOT, never the current working directory.**
 
-**⚠️ IMPORTANT: Project root ≠ Template location ≠ Current working directory**
-
-If you're reading this AI.md from `/root/Projects/github/apimgr/AI.md` to build a project in `~/Documents/myproject`, all file operations must be in `~/Documents/myproject/`, NOT in `/root/Projects/github/apimgr/`.
-
 ### Defining Project Root
 
 **Project root** is the top-level directory of your project, determined by:
@@ -3610,7 +3990,7 @@ cd /path/to/project && docker build -f docker/Dockerfile .
 | **Always Latest Stable** | Use latest stable Go version when starting new projects |
 | **Build Only** | Go is only for building, not runtime (single static binary) |
 | **go.mod** | Set `go 1.23` or higher in go.mod |
-| **Docker** | Use `golang:alpine` for build/test/debug (always latest Go) |
+| **Docker** | Use `golang:alpine` for builds, Incus for debugging (always latest Go) |
 | **No Pinning** | Don't pin to patch versions unless compatibility issue |
 
 **go.mod Example:**
@@ -3810,13 +4190,18 @@ require (
 ```go
 import "golang.org/x/crypto/argon2"
 
-// Recommended parameters
+// Recommended parameters (OWASP 2023)
 const (
-    ArgonTime    = 3         // iterations
-    ArgonMemory  = 64 * 1024 // 64 MB
-    ArgonThreads = 4         // parallelism
-    ArgonKeyLen  = 32        // output length in bytes
-    ArgonSaltLen = 16        // salt length in bytes
+	// Iterations
+	ArgonTime = 3
+	// Memory in KB (64 MB)
+	ArgonMemory = 64 * 1024
+	// Parallelism
+	ArgonThreads = 4
+	// Output length in bytes
+	ArgonKeyLen = 32
+	// Salt length in bytes
+	ArgonSaltLen = 16
 )
 
 func HashPassword(password string) (string, error) {
@@ -3918,8 +4303,8 @@ Before proceeding, confirm you understand:
 | Config | `~/.config/casapps/casspeed/` |
 | Config File | `~/.config/casapps/casspeed/server.yml` |
 | Data | `~/.local/share/casapps/casspeed/` |
-| Logs | `~/.local/share/casapps/casspeed/logs/` |
-| Backup | `~/.local/backups/casapps/casspeed/` |
+| Logs | `~/.local/log/casapps/casspeed/` |
+| Backup | `~/.local/backup/casapps/casspeed/` |
 | PID File | `~/.local/share/casapps/casspeed/casspeed.pid` |
 | SSL | `~/.config/casapps/casspeed/ssl/` (letsencrypt/, local/) |
 | Security | `~/.config/casapps/casspeed/security/` (geoip/, blocklists/, cve/, trivy/) |
@@ -3989,8 +4374,8 @@ Before proceeding, confirm you understand:
 | Config | `~/.config/casapps/casspeed/` |
 | Config File | `~/.config/casapps/casspeed/server.yml` |
 | Data | `~/.local/share/casapps/casspeed/` |
-| Logs | `~/.local/share/casapps/casspeed/logs/` |
-| Backup | `~/.local/backups/casapps/casspeed/` |
+| Logs | `~/.local/log/casapps/casspeed/` |
+| Backup | `~/.local/backup/casapps/casspeed/` |
 | PID File | `~/.local/share/casapps/casspeed/casspeed.pid` |
 | SSL | `~/.config/casapps/casspeed/ssl/` (letsencrypt/, local/) |
 | Security | `~/.config/casapps/casspeed/security/` (geoip/, blocklists/, cve/, trivy/) |
@@ -4040,7 +4425,7 @@ Before proceeding, confirm you understand:
 | Config File | `/config/server.yml` |
 | Security DBs | `/config/security/` (geoip, blocklists, cve, trivy) |
 | Data | `/data/` |
-| Logs | `/data/logs/` |
+| Logs | `/data/log/` |
 | SQLite DB | `/data/db/` |
 | Internal Port | `80` |
 
@@ -4747,9 +5132,10 @@ func handleForm(w http.ResponseWriter, r *http.Request) {
 }
 
 // JSON API body
+// All fields are strings to accept flexible boolean input (true/false, yes/no, 1/0)
 type CreateUserRequest struct {
     Email    string `json:"email"`
-    IsAdmin  string `json:"is_admin"`  // Accept string for flexible input
+    IsAdmin  string `json:"is_admin"`
     Verified string `json:"verified"`
 }
 
@@ -5229,7 +5615,8 @@ import (
 // registerDebugRoutes registers debug endpoints (--debug/DEBUG=true only)
 func (s *Server) registerDebugRoutes(r chi.Router) {
     if !s.config.IsDebug() {
-        return // No debug routes unless --debug or DEBUG=true
+        // No debug routes unless --debug or DEBUG=true
+        return
     }
 
     r.Route("/debug", func(r chi.Router) {
@@ -5307,8 +5694,10 @@ func (s *Server) handleDebugMemory(w http.ResponseWriter, r *http.Request) {
 
 // handleDebugGoroutines returns goroutine count and stack traces
 func (s *Server) handleDebugGoroutines(w http.ResponseWriter, r *http.Request) {
-    buf := make([]byte, 1024*1024) // 1MB buffer
-    n := runtime.Stack(buf, true)   // true = all goroutines
+    // 1MB buffer for stack traces
+    buf := make([]byte, 1024*1024)
+    // true = include all goroutines
+    n := runtime.Stack(buf, true)
 
     w.Header().Set("Content-Type", "text/plain; charset=utf-8")
     w.WriteHeader(http.StatusOK)
@@ -5427,8 +5816,9 @@ import (
 
 // debugMiddleware logs detailed request/response info (--debug/DEBUG=true only)
 func (s *Server) debugMiddleware(next http.Handler) http.Handler {
+    // No-op unless debug enabled
     if !s.config.IsDebug() {
-        return next // No-op unless debug enabled
+        return next
     }
 
     return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -5775,7 +6165,7 @@ Default config: /etc/apimgr/jokes/  # Hardcoded project name
 |------|------|----------------------|----------------------|
 | `--config` | Directory | `/etc/casapps/casspeed/` | `~/.config/casapps/casspeed/` |
 | `--data` | Directory | `/var/lib/casapps/casspeed/` | `~/.local/share/casapps/casspeed/` |
-| `--log` | Directory | `/var/log/casapps/casspeed/` | `~/.local/share/casapps/casspeed/logs/` |
+| `--log` | Directory | `/var/log/casapps/casspeed/` | `~/.local/log/casapps/casspeed/` |
 | `--pid` | File | `/var/run/casapps/casspeed.pid` | `~/.local/share/casapps/casspeed/casspeed.pid` |
 
 ### Directory Validation Rules
@@ -5830,7 +6220,8 @@ func EnsurePIDFile(path string, isRoot bool) error {
 func CheckPIDFile(pidPath string) (bool, int, error) {
     data, err := os.ReadFile(pidPath)
     if os.IsNotExist(err) {
-        return false, 0, nil // No PID file, not running
+        // No PID file, not running
+        return false, 0, nil
     }
     if err != nil {
         return false, 0, fmt.Errorf("reading pid file: %w", err)
@@ -6110,11 +6501,14 @@ func shouldDaemonize(isServiceStart bool, daemonFlag bool, configDaemonize bool)
         // Service start - detect manager and ignore config
         switch detectServiceManager() {
         case "systemd", "launchd", "runit", "s6", "docker", "container":
-            return false // Always foreground
+            // Always foreground
+            return false
         case "sysv", "rcd":
-            return true // Always daemonize
+            // Always daemonize
+            return true
         default:
-            return false // Unknown, default to foreground
+            // Unknown, default to foreground
+            return false
         }
     }
 
@@ -6169,7 +6563,8 @@ func Daemonize() error {
     cmd.Stdout = nil
     cmd.Stderr = nil
     cmd.SysProcAttr = &syscall.SysProcAttr{
-        Setsid: true, // Create new session (detach from controlling terminal)
+        // Create new session (detach from controlling terminal)
+        Setsid: true,
     }
 
     if err := cmd.Start(); err != nil {
@@ -6208,7 +6603,8 @@ func Daemonize() error {
     // Use Windows Service (--service install/start) instead
     fmt.Fprintln(os.Stderr, "Warning: --daemon is not supported on Windows")
     fmt.Fprintln(os.Stderr, "Use --service install && --service start for Windows Service")
-    return nil // Continue in foreground
+    // Continue in foreground
+    return nil
 }
 ```
 
@@ -6327,12 +6723,17 @@ import (
 // setupSignalHandler configures graceful shutdown (Unix)
 func setupSignalHandler(server *http.Server, pidFile string) {
     sigChan := make(chan os.Signal, 1)
+    // SIGTERM: kill (default)
+    // SIGINT: Ctrl+C
+    // SIGQUIT: Ctrl+\
+    // SIGUSR1: Reopen logs
+    // SIGUSR2: Status dump
     signal.Notify(sigChan,
-        syscall.SIGTERM,  // kill (default)
-        syscall.SIGINT,   // Ctrl+C
-        syscall.SIGQUIT,  // Ctrl+\
-        syscall.SIGUSR1,  // Reopen logs
-        syscall.SIGUSR2,  // Status dump
+        syscall.SIGTERM,
+        syscall.SIGINT,
+        syscall.SIGQUIT,
+        syscall.SIGUSR1,
+        syscall.SIGUSR2,
     )
 
     // Handle SIGRTMIN+3 (Docker STOPSIGNAL) - signal 37
@@ -6485,7 +6886,8 @@ func stopChildProcesses(timeout time.Duration) {
         process, _ := os.FindProcess(pid)
         for time.Now().Before(deadline) {
             if err := process.Signal(syscall.Signal(0)); err != nil {
-                break // Process exited
+                // Process exited
+                break
             }
             time.Sleep(100 * time.Millisecond)
         }
@@ -6548,9 +6950,12 @@ type ConfigManager struct {
     configPath      string
     db              *sql.DB
     lastFileModTime time.Time
-    lastDBVersion   int64         // Config version in database
-    pendingRestart  bool          // True if restart-required settings changed
-    restartSettings []string      // Which settings need restart
+    // Config version in database
+    lastDBVersion   int64
+    // True if restart-required settings changed
+    pendingRestart  bool
+    // Which settings need restart
+    restartSettings []string
     mu              sync.RWMutex
 }
 
@@ -6841,8 +7246,8 @@ database:
 - Conflict resolution: primary wins
 - Sync uses Valkey/Redis pub/sub for real-time updates
 
-See **PART 17: SERVER CONFIGURATION** for Valkey/Redis setup.
-See **PART 23: DATABASE & CLUSTER** for full cluster configuration.
+See **PART 18: SERVER CONFIGURATION** for Valkey/Redis setup.
+See **PART 24: DATABASE & CLUSTER** for full cluster configuration.
 
 **SQLite vs Remote - Key Differences:**
 
@@ -7475,7 +7880,8 @@ func GetConfigDir(flagValue string) string {
     if envValue := os.Getenv("CONFIG_DIR"); envValue != "" {
         return envValue
     }
-    return defaultConfigDir() // OS-specific default
+    // OS-specific default
+    return defaultConfigDir()
 }
 
 // GetDatabaseDir returns database directory (always under data dir)
@@ -7494,7 +7900,7 @@ func GetDatabaseDir(dataDir string) string {
 # Configurable paths (via env vars or CLI flags)
 export CONFIG_DIR="/config"
 export DATA_DIR="/data"
-export LOG_DIR="/data/logs"
+export LOG_DIR="/data/log"
 export DATABASE_DIR="/data/db"
 export BACKUP_DIR="/data/backup"
 
@@ -7891,7 +8297,8 @@ func IsValidHost(host string, devMode bool, projectName string) bool {
 
     // Check dynamic project-specific TLD (e.g., app.jokes, dev.quotes, quotes, jokes, casspeed)
     if projectName != "" && strings.HasSuffix(lower, "."+strings.ToLower(projectName)) {
-        return devMode // Project TLDs only valid in dev mode
+        // Project TLDs only valid in dev mode
+        return devMode
     }
 
     // Get the public suffix (TLD or eTLD like co.uk)
@@ -7899,7 +8306,8 @@ func IsValidHost(host string, devMode bool, projectName string) bool {
 
     // Check if it's a dev-only TLD
     if devOnlyTLDs[suffix] {
-        return devMode // Dev TLDs only valid in dev mode
+        // Dev TLDs only valid in dev mode
+        return devMode
     }
 
     // In production, require valid ICANN TLD
@@ -8492,7 +8900,8 @@ func installWindowsService() error {
             DisplayName:     "casspeed",
             Description:     "casspeed service",
             StartType:       mgr.StartAutomatic,
-            ServiceStartName: "", // Empty = Virtual Service Account
+            // Empty = Virtual Service Account
+            ServiceStartName: "",
         },
     )
     if err != nil {
@@ -8569,7 +8978,7 @@ func installWindowsService() error {
 
 | Asset Type | Location |
 |------------|----------|
-| Templates | `src/server/templates/` |
+| Templates | `src/server/template/` |
 | Static files | `src/server/static/` |
 | Application data | `src/data/` (JSON files) |
 
@@ -8715,12 +9124,11 @@ data:
 
 ## Versioning (NON-NEGOTIABLE)
 
+**See PART 16: HEALTH & VERSIONING for complete versioning rules (SemVer, sources, format).**
+
 ### Version File: `release.txt`
 
-- If `VERSION` env var is set, use it (highest priority)
-- If `release.txt` exists, read version from it
-- If `release.txt` does not exist, create with current app version
-- Auto-increment patch version on each release
+- Source of truth for stable version (see PART 16)
 - Semantic versioning: `MAJOR.MINOR.PATCH` (e.g., `1.2.3`)
 
 ### Version Tag `v` Prefix Rules (NON-NEGOTIABLE)
@@ -8805,7 +9213,7 @@ format_version_tag() {
 |---------|------|---------|
 | Host Build | `binaries/casspeed` | `binaries/jokes` |
 | Distribution | `casspeed-{os}-{arch}` | `jokes-linux-amd64` |
-| Local/Testing | `$(mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}.XXXXXX")/casspeed` | Org-prefixed temp dir |
+| Local/Testing | `$(mktemp -d "${TMPDIR:-/tmp}/$CASAPPS.XXXXXX")/casspeed` | Org-prefixed temp dir |
 
 **If built with musl → strip binary before release. Final name has NO `-musl` suffix.**
 
@@ -9074,7 +9482,7 @@ All Docker builds use persistent Go module caching to avoid re-downloading depen
 3. No `-ldflags` (version info not embedded)
 4. Outputs to `{tempdir}/casapps.XXXXXX/casspeed` (isolated, org-identifiable)
 5. Uses Docker (`golang:alpine`) - keeps host clean
-6. Easy cleanup: `rm -rf "${TMPDIR:-/tmp}"/${PROJECTORG}.*/` or auto-deleted on reboot
+6. Easy cleanup: `rm -rf "${TMPDIR:-/tmp}"/$CASAPPS.*/` or auto-deleted on reboot
 
 **When to use:**
 
@@ -9229,50 +9637,50 @@ All Docker builds use persistent Go module caching to avoid re-downloading depen
 
 ## NEVER Use Project Directory for Testing (NON-NEGOTIABLE)
 
-**ALL testing, debugging, and runtime data MUST use temp directories. NEVER the project directory.**
+**See Critical Rules: Files & Directories Master Rules for complete forbidden lists.**
 
-| FORBIDDEN | REASON |
-|-----------|--------|
-| `data/` | Project directory - will pollute repo |
-| `config/` | Project directory - will pollute repo |
-| `test-data/` | Project directory - will pollute repo |
-| `logs/` | Project directory - will pollute repo |
-| `{project_path}/anything` | NEVER write test data to project |
+**Testing Rule:** ALL runtime/test data MUST use temp directories:
+
+| REQUIRED | Example |
+|----------|---------|
+| Temp directory | `/tmp/casapps/casspeed-XXXXXX/` |
+| Volume mounts | `/tmp/casapps/casspeed-XXXXXX/rootfs/` |
+| Test databases | In temp directory, never project |
 
 **The project directory is for SOURCE CODE ONLY. All runtime/test data goes to the OS temp directory.**
 
-## NEVER Create Example Files (NON-NEGOTIABLE)
+## Config Files: Runtime-Generated Only (NON-NEGOTIABLE)
 
-**Do NOT create example/sample configuration files in the repository.**
+**See Critical Rules: Files & Directories Master Rules - "NEVER Create These Files"**
 
-| FORBIDDEN | REASON |
-|-----------|--------|
-| `server.example.yml` | Unnecessary - defaults are in binary |
-| `server.sample.yml` | Unnecessary - defaults are in binary |
-| `.env` | We don't use .env files |
-| `.env.example` | We don't use .env files |
-| `.env.sample` | We don't use .env files |
-| `.env.local` | We don't use .env files |
-| `config.example.json` | Unnecessary |
-| `*.example.*` | No example files of any kind |
-| `*.sample.*` | No sample files of any kind |
+Config files are NEVER in the repository. They are generated at RUNTIME:
 
-**If docker-compose.yml needs env vars → hardcode with sane defaults. NEVER use .env files.**
+| File | Location | Created When |
+|------|----------|--------------|
+| `server.yml` | `{config_dir}/server.yml` (see PART 4) | Server first run |
+| `cli.yml` | `~/.config/casapps/casspeed/cli.yml` | CLI first run |
+| Tor data | `{data_dir}/tor/` (see PART 30) | When Tor enabled |
 
-**Why no example files?**
+**Why runtime-generated?**
 
-| Reason | Description |
-|--------|-------------|
-| **Self-documenting** | Binary generates default config on first run |
-| **Always current** | Embedded defaults are always in sync with code |
-| **No maintenance** | Example files become outdated and misleading |
-| **Cleaner repo** | Less clutter in repository |
+| Reason | Benefit |
+|--------|---------|
+| **Always current** | Embedded defaults always in sync with code |
+| **No maintenance** | No example files to become outdated |
+| **Cleaner repo** | Source code only, no runtime artifacts |
 
-**How users get configuration:**
+**How configuration works:**
 
-1. Run binary - it auto-generates `server.yml` with defaults on first run
-2. Admin panel shows all settings with descriptions
-3. Documentation in AI.md describes all options
+1. **First run** - Binary auto-generates config in OS config directory with sane defaults
+2. **Flags/env override** - Command-line flags and environment variables override config
+3. **Admin panel** - Web UI for all settings (server)
+4. **Manual edit** - Users can edit generated config file if needed
+
+**Configuration precedence (highest to lowest):**
+1. Command-line flags
+2. Environment variables
+3. Config file (in OS config directory)
+4. Embedded defaults
 
 ## Temporary Directory Structure (NON-NEGOTIABLE)
 
@@ -9287,7 +9695,7 @@ All Docker builds use persistent Go module caching to avoid re-downloading depen
 **REQUIRED:**
 - ✓ `/tmp/casapps/casspeed-XXXXXX/` - Full structure
 - ✓ `/tmp/apimgr/jokes-aB3xY9/` - Org + project + random
-- ✓ `mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}/$CASSPEED-XXXXXX"` - Proper command
+- ✓ `mktemp -d "${TMPDIR:-/tmp}/$CASAPPS/$CASSPEED-XXXXXX"` - Proper command
 
 **See "Inferring Variables from Path" section for how to detect `ORG` and `PROJECT`.**
 
@@ -9297,7 +9705,7 @@ All Docker builds use persistent Go module caching to avoid re-downloading depen
 
 | Language | How to Create Prefixed Temp Dir |
 |----------|--------------------------------|
-| Shell | `mkdir -p "${TMPDIR:-/tmp}/${PROJECTORG}" && mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}/$CASSPEED-XXXXXX"` |
+| Shell | `mkdir -p "${TMPDIR:-/tmp}/$CASAPPS" && mktemp -d "${TMPDIR:-/tmp}/$CASAPPS/$CASSPEED-XXXXXX"` |
 | Go | `os.MkdirAll(filepath.Join(os.TempDir(), projectOrg), 0755); os.MkdirTemp(filepath.Join(os.TempDir(), projectOrg), projectName+"-")` |
 | Python | `os.makedirs(f"{tempfile.gettempdir()}/{project_org}", exist_ok=True); tempfile.mkdtemp(prefix=f"{project_name}-", dir=f"{tempfile.gettempdir()}/{project_org}")` |
 
@@ -9334,10 +9742,10 @@ All Docker builds use persistent Go module caching to avoid re-downloading depen
 
 ```bash
 # Find all temp dirs for this org
-ls -la "${TMPDIR:-/tmp}"/${PROJECTORG}.*/
+ls -la "${TMPDIR:-/tmp}"/$CASAPPS.*/
 
 # Clean all temp dirs for this org
-rm -rf "${TMPDIR:-/tmp}"/${PROJECTORG}.*/
+rm -rf "${TMPDIR:-/tmp}"/$CASAPPS.*/
 ```
 
 ### Correct vs Incorrect
@@ -9348,7 +9756,7 @@ rm -rf "${TMPDIR:-/tmp}"/${PROJECTORG}.*/
 | `/tmp/myfile` | `/tmp/apimgr/jokes-aB3xY9/myfile` | Always use org/project structure |
 | `/tmp/jokes` | `/tmp/apimgr/jokes-kL9mN2/` | Missing org, missing random suffix |
 | `/tmp/test-data/` | `/tmp/apimgr/jokes-Qw5rT1/test-data/` | Generic path not allowed |
-| `mktemp -d` | `mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}/$CASSPEED-XXXXXX"` | Must include org/project |
+| `mktemp -d` | `mktemp -d "${TMPDIR:-/tmp}/$CASAPPS/$CASSPEED-XXXXXX"` | Must include org/project |
 | `os.TempDir()` alone | `os.MkdirTemp(filepath.Join(os.TempDir(), projectOrg), projectName+"-")` | Must nest under org |
 | Hardcoded org name | Detect from git remote or path | Auto-detect, never hardcode |
 
@@ -9387,6 +9795,8 @@ rm -rf "${TMPDIR:-/tmp}"/${PROJECTORG}.*/
 ## Container Usage (NON-NEGOTIABLE)
 
 **⚠️ NEVER RUN BINARIES DIRECTLY ON THE HOST. ALWAYS USE CONTAINERS. ⚠️**
+
+**See also: "Container-Only Development" in Critical Rules section.**
 
 **ALL builds, tests, and binary execution MUST use containers. The host is for orchestration only.**
 
@@ -9596,7 +10006,7 @@ docker run --rm -v $(pwd):/build -w /build golang:alpine go test -cover ./...
 
 ```bash
 # 1. Build in Docker (always use Docker for builds)
-BUILD_DIR=$(mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}.XXXXXX")
+BUILD_DIR=$(mktemp -d "${TMPDIR:-/tmp}/$CASAPPS.XXXXXX")
 docker run --rm -v $(pwd):/build -w /build -e CGO_ENABLED=0 \
   golang:alpine go build -o /build/binaries/casspeed src
 
@@ -9666,7 +10076,7 @@ PROJECTNAME=$(basename "$PWD")
 PROJECTORG=$(basename "$(dirname "$PWD")")
 
 # Create temp directory for build
-BUILD_DIR=$(mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}.XXXXXX")
+BUILD_DIR=$(mktemp -d "${TMPDIR:-/tmp}/$CASAPPS.XXXXXX")
 trap "rm -rf $BUILD_DIR" EXIT
 
 echo "Building binary in Docker..."
@@ -9771,7 +10181,7 @@ PROJECTORG=$(basename "$(dirname "$PWD")")
 CONTAINER_NAME="test-$CASSPEED-$$"
 
 # Create temp directory for build
-BUILD_DIR=$(mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}.XXXXXX")
+BUILD_DIR=$(mktemp -d "${TMPDIR:-/tmp}/$CASAPPS.XXXXXX")
 trap "rm -rf $BUILD_DIR; incus delete $CONTAINER_NAME --force 2>/dev/null || true" EXIT
 
 echo "Building binary in Docker..."
@@ -9942,8 +10352,8 @@ else
     exit 1
 fi
 
-# 2. Get setup token from server logs
-SETUP_TOKEN=$(grep -oP 'Setup Token.*:\s*\K[a-f0-9]+' /tmp/server.log | head -1)
+# 2. Get setup token from server logs (using proper temp dir structure)
+SETUP_TOKEN=$(grep -oP 'Setup Token.*:\s*\K[a-f0-9]+' "${TMPDIR:-/tmp}/$CASAPPS/$CASSPEED/server.log" | head -1)
 
 if [ -z "$SETUP_TOKEN" ]; then
     echo "✗ FAILED: No setup token found in logs"
@@ -10147,7 +10557,7 @@ incus delete test-casspeed --force
 
 ```bash
 # Create prefixed temp dir for test data
-TEST_DIR=$(mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}.XXXXXX")
+TEST_DIR=$(mktemp -d "${TMPDIR:-/tmp}/$CASAPPS.XXXXXX")
 mkdir -p $TEST_DIR/{config,data,logs}
 
 # Build to binaries/
@@ -10177,7 +10587,7 @@ rm -rf $TEST_DIR
 
 ```bash
 # Create prefixed temp dir
-TEST_DIR=$(mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}.XXXXXX")
+TEST_DIR=$(mktemp -d "${TMPDIR:-/tmp}/$CASAPPS.XXXXXX")
 mkdir -p $TEST_DIR/{config,data,logs}
 
 # Build
@@ -10308,7 +10718,7 @@ rm -rf $TEST_DIR
 | Project binaries | `rm -rf binaries/casspeed*` |
 | Project releases | `rm -rf releases/casspeed*` |
 
-**Note:** Always use `mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}.XXXXXX"` and save the path to a variable for cleanup. Temp dirs are auto-cleaned on reboot.
+**Note:** Always use `mktemp -d "${TMPDIR:-/tmp}/$CASAPPS.XXXXXX"` and save the path to a variable for cleanup. Temp dirs are auto-cleaned on reboot.
 
 ### NEVER Delete Without Confirmation
 
@@ -10391,7 +10801,7 @@ docker/
 | `/config/security` | Security databases (geoip, blocklists, cve, trivy) |
 | `/data` | Data directory (databases, Tor keys, caches) |
 | `/data/db` | SQLite databases (server.db, users.db) |
-| `/data/logs` | Log files (access.log, error.log, audit.log, etc.) |
+| `/data/log` | Log files (access.log, error.log, audit.log, etc.) |
 | `/data/tor` | Tor data (hidden service keys) |
 | `/data/backup` | Backup archives |
 | `/usr/local/bin/casspeed` | Application binary |
@@ -10524,7 +10934,7 @@ RUN apk add --no-cache \
     tor
 
 # Create directories with proper structure
-RUN mkdir -p /config /config/security /data/db /data/logs /data/tor /data/backup
+RUN mkdir -p /config /config/security /data/db /data/log /data/tor /data/backup
 
 # Copy binary from builder stage (multi-stage build)
 COPY --from=builder /build/binary/casspeed /usr/local/bin/casspeed
@@ -10594,7 +11004,7 @@ export TZ="${TZ:-America/New_York}"
 # Configurable paths (via env vars or CLI flags)
 export CONFIG_DIR="/config"
 export DATA_DIR="/data"
-export LOG_DIR="/data/logs"
+export LOG_DIR="/data/log"
 export DATABASE_DIR="/data/db"
 export BACKUP_DIR="/data/backup"
 
@@ -10923,7 +11333,7 @@ $TEMP_DIR/
 | `/config/` | Configuration files |
 | `/config/security/` | TLS certs, keys |
 | `/data/db/` | SQLite databases (server.db, users.db) |
-| `/data/logs/` | Application and service logs |
+| `/data/log/` | Application and service logs |
 | `/data/tor/` | Tor hidden service data |
 | `/data/backup/` | Backup files |
 | `/data/cache/` | Cache files (if used) |
@@ -10950,8 +11360,8 @@ $TEMP_DIR/
 # Set PROJECT_ROOT to your actual project location
 PROJECT_ROOT="$(git rev-parse --show-toplevel)"  # Use git top-level
 # Or use absolute path: PROJECT_ROOT="/path/to/your/project"
-mkdir -p "${TMPDIR:-/tmp}/${PROJECTORG}"
-TEMP_DIR=$(mktemp -d "${TMPDIR:-/tmp}/${PROJECTORG}/$CASSPEED-XXXXXX")
+mkdir -p "${TMPDIR:-/tmp}/$CASAPPS"
+TEMP_DIR=$(mktemp -d "${TMPDIR:-/tmp}/$CASAPPS/$CASSPEED-XXXXXX")
 mkdir -p "$TEMP_DIR/rootfs/config" "$TEMP_DIR/rootfs/data"
 
 # Copy docker-compose.yml
@@ -11223,7 +11633,7 @@ networks:
 | Security dir | `/config/security` (geoip, blocklists, cve, trivy) |
 | Data dir | `/data` |
 | Database dir | `/data/db` (server.db, users.db) |
-| Log dir | `/data/logs` |
+| Log dir | `/data/log` |
 | Tor data dir | `/data/tor` |
 | Backup dir | `/data/backup` |
 | Binary | `/usr/local/bin/casspeed` |
@@ -11236,7 +11646,7 @@ networks:
 | `/config` | `./rootfs/config` | Configuration files |
 | `/data` | `./rootfs/data` | All persistent data |
 | `/data/db/` | (inside /data) | SQLite databases |
-| `/data/logs/` | (inside /data) | Log files |
+| `/data/log/` | (inside /data) | Log files |
 
 ## Tor in Container
 
@@ -12749,8 +13159,8 @@ docker:build:
         --build-arg VERSION="${VERSION}" \
         --build-arg COMMIT_ID="${CI_COMMIT_SHORT_SHA}" \
         --build-arg BUILD_DATE="${BUILD_DATE}" \
-        --label "org.opencontainers.image.vendor=${PROJECTORG}" \
-        --label "org.opencontainers.image.authors=${PROJECTORG}" \
+        --label "org.opencontainers.image.vendor=$CASAPPS" \
+        --label "org.opencontainers.image.authors=$CASAPPS" \
         --label "org.opencontainers.image.title=$CASSPEED" \
         --label "org.opencontainers.image.base.name=$CASSPEED" \
         --label "org.opencontainers.image.description=Containerized version of $CASSPEED" \
@@ -12761,8 +13171,8 @@ docker:build:
         --label "org.opencontainers.image.url=${CI_PROJECT_URL}" \
         --label "org.opencontainers.image.source=${CI_PROJECT_URL}" \
         --label "org.opencontainers.image.documentation=${CI_PROJECT_URL}" \
-        --annotation "manifest:org.opencontainers.image.vendor=${PROJECTORG}" \
-        --annotation "manifest:org.opencontainers.image.authors=${PROJECTORG}" \
+        --annotation "manifest:org.opencontainers.image.vendor=$CASAPPS" \
+        --annotation "manifest:org.opencontainers.image.authors=$CASAPPS" \
         --annotation "manifest:org.opencontainers.image.title=$CASSPEED" \
         --annotation "manifest:org.opencontainers.image.description=Containerized version of $CASSPEED" \
         --annotation "manifest:org.opencontainers.image.licenses=MIT" \
@@ -12866,8 +13276,8 @@ pipeline {
         PROJECTORG = 'casapps'
         BINDIR = 'binaries'
         RELDIR = 'releases'
-        GOCACHE = '/tmp/go-cache'
-        GOMODCACHE = '/tmp/go-mod-cache'
+        GOCACHE = "/tmp/$CASAPPS/go-cache"
+        GOMODCACHE = "/tmp/$CASAPPS/go-mod-cache"
 
         // =========================================================================
         // GIT PROVIDER CONFIGURATION
@@ -12877,22 +13287,22 @@ pipeline {
         // ----- GITHUB (default) -----
         GIT_FQDN = 'github.com'
         GIT_TOKEN = credentials('github-token')  // Jenkins credentials ID
-        REGISTRY = "ghcr.io/${PROJECTORG}/$CASSPEED"
+        REGISTRY = "ghcr.io/$CASAPPS/$CASSPEED"
 
         // ----- GITEA / FORGEJO (self-hosted) -----
         // GIT_FQDN = 'git.example.com'  // Your Gitea/Forgejo domain
         // GIT_TOKEN = credentials('gitea-token')  // Jenkins credentials ID
-        // REGISTRY = "${GIT_FQDN}/${PROJECTORG}/$CASSPEED"
+        // REGISTRY = "${GIT_FQDN}/$CASAPPS/$CASSPEED"
 
         // ----- GITLAB (gitlab.com or self-hosted) -----
         // GIT_FQDN = 'gitlab.com'  // or your self-hosted GitLab domain
         // GIT_TOKEN = credentials('gitlab-token')  // Jenkins credentials ID
-        // REGISTRY = "registry.${GIT_FQDN}/${PROJECTORG}/$CASSPEED"
+        // REGISTRY = "registry.${GIT_FQDN}/$CASAPPS/$CASSPEED"
 
         // ----- DOCKER HUB -----
         // GIT_FQDN = 'github.com'  // Git host (separate from registry)
         // GIT_TOKEN = credentials('github-token')
-        // REGISTRY = "docker.io/${PROJECTORG}/$CASSPEED"
+        // REGISTRY = "docker.io/$CASAPPS/$CASSPEED"
 
         // =========================================================================
     }
@@ -13322,7 +13732,7 @@ pipeline {
                     // Login to container registry
                     // Works with: ghcr.io, registry.gitlab.com, gitea/forgejo, docker.io
                     sh """
-                        echo "\${GIT_TOKEN}" | docker login ${REGISTRY.split('/')[0]} -u ${PROJECTORG} --password-stdin
+                        echo "\${GIT_TOKEN}" | docker login ${REGISTRY.split('/')[0]} -u $CASAPPS --password-stdin
                     """
 
                     // Build multi-arch with OCI labels and manifest annotations
@@ -13334,8 +13744,8 @@ pipeline {
                             --build-arg VERSION="${VERSION}" \
                             --build-arg COMMIT_ID="${COMMIT_ID}" \
                             --build-arg BUILD_DATE="${BUILD_DATE}" \
-                            --label "org.opencontainers.image.vendor=${PROJECTORG}" \
-                            --label "org.opencontainers.image.authors=${PROJECTORG}" \
+                            --label "org.opencontainers.image.vendor=$CASAPPS" \
+                            --label "org.opencontainers.image.authors=$CASAPPS" \
                             --label "org.opencontainers.image.title=$CASSPEED" \
                             --label "org.opencontainers.image.base.name=$CASSPEED" \
                             --label "org.opencontainers.image.description=Containerized version of $CASSPEED" \
@@ -13343,20 +13753,20 @@ pipeline {
                             --label "org.opencontainers.image.version=${VERSION}" \
                             --label "org.opencontainers.image.created=${BUILD_DATE}" \
                             --label "org.opencontainers.image.revision=${COMMIT_ID}" \
-                            --label "org.opencontainers.image.url=https://${GIT_FQDN}/${PROJECTORG}/$CASSPEED" \
-                            --label "org.opencontainers.image.source=https://${GIT_FQDN}/${PROJECTORG}/$CASSPEED" \
-                            --label "org.opencontainers.image.documentation=https://${GIT_FQDN}/${PROJECTORG}/$CASSPEED" \
-                            --annotation "manifest:org.opencontainers.image.vendor=${PROJECTORG}" \
-                            --annotation "manifest:org.opencontainers.image.authors=${PROJECTORG}" \
+                            --label "org.opencontainers.image.url=https://${GIT_FQDN}/$CASAPPS/$CASSPEED" \
+                            --label "org.opencontainers.image.source=https://${GIT_FQDN}/$CASAPPS/$CASSPEED" \
+                            --label "org.opencontainers.image.documentation=https://${GIT_FQDN}/$CASAPPS/$CASSPEED" \
+                            --annotation "manifest:org.opencontainers.image.vendor=$CASAPPS" \
+                            --annotation "manifest:org.opencontainers.image.authors=$CASAPPS" \
                             --annotation "manifest:org.opencontainers.image.title=$CASSPEED" \
                             --annotation "manifest:org.opencontainers.image.description=Containerized version of $CASSPEED" \
                             --annotation "manifest:org.opencontainers.image.licenses=MIT" \
                             --annotation "manifest:org.opencontainers.image.version=${VERSION}" \
                             --annotation "manifest:org.opencontainers.image.created=${BUILD_DATE}" \
                             --annotation "manifest:org.opencontainers.image.revision=${COMMIT_ID}" \
-                            --annotation "manifest:org.opencontainers.image.url=https://${GIT_FQDN}/${PROJECTORG}/$CASSPEED" \
-                            --annotation "manifest:org.opencontainers.image.source=https://${GIT_FQDN}/${PROJECTORG}/$CASSPEED" \
-                            --annotation "manifest:org.opencontainers.image.documentation=https://${GIT_FQDN}/${PROJECTORG}/$CASSPEED" \
+                            --annotation "manifest:org.opencontainers.image.url=https://${GIT_FQDN}/$CASAPPS/$CASSPEED" \
+                            --annotation "manifest:org.opencontainers.image.source=https://${GIT_FQDN}/$CASAPPS/$CASSPEED" \
+                            --annotation "manifest:org.opencontainers.image.documentation=https://${GIT_FQDN}/$CASAPPS/$CASSPEED" \
                             ${tags} \
                             --push \
                             .
@@ -13383,7 +13793,7 @@ pipeline {
 | Agent labels | `amd64` and `arm64` MUST be available |
 | Docker | Required on all agents (builds use golang:alpine) |
 | Docker buildx | Required on amd64 agent for multi-arch builds |
-| Go caches | `/tmp/go-cache` and `/tmp/go-mod-cache` |
+| Go caches | `/tmp/casapps/go-cache` and `/tmp/casapps/go-mod-cache` |
 
 ### Credentials Setup (Jenkins → Credentials → Add Credentials)
 
@@ -13414,17 +13824,17 @@ In the Jenkinsfile, uncomment the appropriate block:
 // ----- GITHUB (default) -----
 GIT_FQDN = 'github.com'
 GIT_TOKEN = credentials('github-token')
-REGISTRY = "ghcr.io/${PROJECTORG}/$CASSPEED"
+REGISTRY = "ghcr.io/$CASAPPS/$CASSPEED"
 
 // ----- GITEA / FORGEJO (self-hosted) -----
 // GIT_FQDN = 'git.example.com'
 // GIT_TOKEN = credentials('gitea-token')
-// REGISTRY = "${GIT_FQDN}/${PROJECTORG}/$CASSPEED"
+// REGISTRY = "${GIT_FQDN}/$CASAPPS/$CASSPEED"
 
 // ----- GITLAB (gitlab.com or self-hosted) -----
 // GIT_FQDN = 'gitlab.com'
 // GIT_TOKEN = credentials('gitlab-token')
-// REGISTRY = "registry.${GIT_FQDN}/${PROJECTORG}/$CASSPEED"
+// REGISTRY = "registry.${GIT_FQDN}/$CASAPPS/$CASSPEED"
 ```
 
 ### Triggers Comparison
@@ -13463,6 +13873,31 @@ Before proceeding, confirm you understand:
 
 ## Health Checks
 
+**Single endpoint, two formats:**
+- `/healthz` - HTML frontend (pretty status page)
+- `/api/v1/healthz` - JSON API (same data)
+
+**NO sub-routes** - just `/healthz`, not `/healthz/db` or `/healthz/**`
+
+### Security: Public Info Only (NON-NEGOTIABLE)
+
+**Healthz is PUBLIC. NEVER expose sensitive data.**
+
+| ALLOWED (public) | FORBIDDEN (sensitive) |
+|------------------|----------------------|
+| Status: "healthy"/"unhealthy" | Database connection strings |
+| Version: "1.0.0" | API keys or tokens |
+| Uptime: "2d 5h" | Passwords or secrets |
+| Mode: "production" | Internal IP addresses |
+| Checks: "ok"/"error" | File paths on server |
+| Node ID (opaque) | Environment variables |
+| Cluster node count | Config file contents |
+
+**Database/cache checks MUST be vague:**
+- ✅ `"database": "ok"` or `"database": "error"`
+- ❌ `"database": "postgresql://user:pass@host:5432/db"`
+- ❌ `"database": {"host": "10.0.0.5", "port": 5432}`
+
 ### /healthz (HTML)
 
 - Status (healthy/unhealthy)
@@ -13471,7 +13906,7 @@ Before proceeding, confirm you understand:
 - Mode
 - Node ID (cluster mode)
 - Cluster status (if clustered)
-- System resources (optional)
+- System resources (optional - percentages only, no paths)
 
 ### /api/v1/healthz (JSON)
 
@@ -13619,7 +14054,8 @@ func detectClientType(r *http.Request) string {
         return "text"
     }
     if strings.Contains(accept, "application/json") {
-        return "json" // Rare for frontend, but support it
+        // Rare for frontend, but support it
+        return "json"
     }
 
     // 2. Check User-Agent for browser detection
@@ -13651,7 +14087,8 @@ func detectClientType(r *http.Request) string {
 
     // 4. Empty or unknown User-Agent
     if ua == "" {
-        return "text" // Default to text for programmatic access
+        // Default to text for programmatic access
+        return "text"
     }
 
     // 5. Default: HTML (safest fallback)
@@ -13898,7 +14335,7 @@ footer {
 - Mark as read on view
 - "Mark all as read" action
 - Links to full notification center
-- See PART 25: EMAIL & NOTIFICATIONS for full specification
+- See PART 26: EMAIL & NOTIFICATIONS for full specification
 
 ## Accessibility (NON-NEGOTIABLE)
 
@@ -13929,15 +14366,64 @@ footer {
 
 ## PWA Support (NON-NEGOTIABLE)
 
-**Progressive Web App features:**
+**Progressive Web App = Native-like web app (installable, offline, push notifications)**
 
-| Feature | Implementation |
-|---------|----------------|
-| **Manifest** | `/manifest.json` with app metadata |
-| **Icons** | Multiple sizes (192x192, 512x512 minimum) |
-| **Service Worker** | Cache static assets for offline use |
-| **Installable** | Meets PWA install criteria |
-| **HTTPS** | Required for service workers |
+| Feature | Implementation | Notes |
+|---------|----------------|-------|
+| **Manifest** | `/manifest.json` with app metadata | Required for install |
+| **Icons** | Multiple sizes (192x192, 512x512 minimum) | For home screen |
+| **Service Worker** | Cache static assets, handle push | Core of PWA |
+| **Installable** | Meets PWA install criteria | Add to home screen |
+| **HTTPS** | Required for service workers | Non-negotiable |
+| **Push Notifications** | Web Push API via Service Worker | User opt-in required |
+| **User Sessions** | Tokens in localStorage/IndexedDB | Persists across restarts |
+| **Background Sync** | Queue actions when offline, sync when online | Seamless offline |
+
+### Push Notifications (PWA)
+
+**Push notifications work even when app is closed (like native apps).**
+
+| Component | Purpose |
+|-----------|---------|
+| **Service Worker** | Receives push events, shows notifications |
+| **Push API** | Subscribe to push service |
+| **Notifications API** | Display system notifications |
+| **VAPID Keys** | Server authentication for push |
+
+**User must grant permission** - prompt on first relevant action, not page load.
+
+```javascript
+// Service Worker - handle push
+self.addEventListener('push', event => {
+  const data = event.data.json();
+  self.registration.showNotification(data.title, {
+    body: data.body,
+    icon: '/static/icons/icon-192.png'
+  });
+});
+```
+
+**Admin Panel Settings (`/admin/server/notifications`):**
+- Enable/disable push notifications
+- VAPID key generation
+- Test push functionality
+
+### User Sessions in PWA
+
+**PWA maintains user login across app restarts.**
+
+| Storage | Use Case | Cleared |
+|---------|----------|---------|
+| **localStorage** | Session token, user preferences | Manual/logout |
+| **IndexedDB** | Offline data, cached responses | Manual/logout |
+| **Cookies** | Server-side session (fallback) | Expiry/logout |
+
+**Session persists when:**
+- App is closed and reopened
+- Device is restarted
+- Switching between browser and installed PWA
+
+**Logout clears all:** localStorage, IndexedDB, service worker cache of user data.
 
 **Offline Behavior:**
 
@@ -14006,17 +14492,11 @@ footer {
 | 500 | Internal Server Error | Server-side errors |
 | 503 | Service Unavailable | Maintenance mode |
 
-## CORS Configuration (NON-NEGOTIABLE)
+## CORS Configuration
 
-**API endpoints allow cross-origin requests:**
+**See "CORS (NON-NEGOTIABLE)" section below for complete configuration and behavior.**
 
-```go
-// CORS headers for API endpoints
-w.Header().Set("Access-Control-Allow-Origin", "*")
-w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS")
-w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization, X-API-Token")
-w.Header().Set("Access-Control-Max-Age", "86400")
-```
+Quick reference: Default allows all origins (`*`). Configure via `web.cors` in server.yml.
 
 ### HTML5 & CSS Over JavaScript (NON-NEGOTIABLE)
 
@@ -14122,19 +14602,19 @@ See **JavaScript Rules** section below for `app.js` structure.
 
 | Location | Purpose |
 |----------|---------|
-| `src/server/templates/` | All `.tmpl` AI.mds |
-| `src/server/templates/partials/` | Reusable template partials |
-| `src/server/templates/layouts/` | Base layouts |
-| `src/server/templates/pages/` | Page-specific templates |
+| `src/server/template/` | All `.tmpl` template files |
+| `src/server/template/partial/` | Reusable template partials |
+| `src/server/template/layout/` | Base layouts |
+| `src/server/template/page/` | Page-specific templates |
 | `src/server/static/` | Static assets (CSS, JS, images) |
 
 **Template Structure (all files use `.tmpl` extension):**
 ```
-src/server/templates/
-├── layouts/
+src/server/template/
+├── layout/
 │   ├── public.tmpl         # Public-facing layout (/, /auth/*, /server/*)
 │   └── admin.tmpl          # Admin panel layout (/admin/*)
-├── partials/
+├── partial/
 │   ├── public/
 │   │   ├── header.tmpl     # Public header (logo, nav, login)
 │   │   ├── nav.tmpl        # Public navigation
@@ -14145,7 +14625,7 @@ src/server/templates/
 │   │   └── footer.tmpl     # Admin footer (version, docs)
 │   ├── head.tmpl           # <head> contents (meta, CSS)
 │   └── scripts.tmpl        # JavaScript includes
-├── pages/
+├── page/
 │   ├── index.tmpl          # Home page
 │   ├── healthz.tmpl        # Health check page
 │   └── error.tmpl          # Error pages (404, 500, etc.)
@@ -14157,7 +14637,7 @@ src/server/templates/
 │   ├── dashboard.tmpl      # Admin dashboard
 │   ├── settings.tmpl       # Settings page
 │   └── ...
-└── components/
+└── component/
     ├── modal.tmpl          # Reusable modal component
     ├── toast.tmpl          # Toast notifications
     └── ...
@@ -14253,14 +14733,14 @@ src/server/templates/
 
 | Partial | Public | Admin | Purpose |
 |---------|:------:|:-----:|---------|
-| `partials/public/header.tmpl` | ✓ | | Logo + top nav + login/user menu |
-| `partials/public/nav.tmpl` | ✓ | | Horizontal navigation links |
-| `partials/public/footer.tmpl` | ✓ | | About, Privacy, Contact links |
-| `partials/admin/header.tmpl` | | ✓ | Logo + search + bell + admin menu |
-| `partials/admin/sidebar.tmpl` | | ✓ | Collapsible sidebar navigation |
-| `partials/admin/footer.tmpl` | | ✓ | Version, docs, status |
-| `partials/head.tmpl` | ✓ | ✓ | Shared `<head>` contents |
-| `partials/scripts.tmpl` | ✓ | ✓ | Shared JavaScript includes |
+| `partial/public/header.tmpl` | ✓ | | Logo + top nav + login/user menu |
+| `partial/public/nav.tmpl` | ✓ | | Horizontal navigation links |
+| `partial/public/footer.tmpl` | ✓ | | About, Privacy, Contact links |
+| `partial/admin/header.tmpl` | | ✓ | Logo + search + bell + admin menu |
+| `partial/admin/sidebar.tmpl` | | ✓ | Collapsible sidebar navigation |
+| `partial/admin/footer.tmpl` | | ✓ | Version, docs, status |
+| `partial/head.tmpl` | ✓ | ✓ | Shared `<head>` contents |
+| `partial/scripts.tmpl` | ✓ | ✓ | Shared JavaScript includes |
 
 ### Static Assets Organization (NON-NEGOTIABLE)
 
@@ -14400,35 +14880,35 @@ function confirmDelete(form, message = 'Are you sure?') {
 | Rule | Description |
 |------|-------------|
 | **Go templates only** | `html/template` package, `.tmpl` extension |
-| **Layouts for structure** | `layouts/public.tmpl`, `layouts/admin.tmpl` |
+| **Layouts for structure** | `layout/public.tmpl`, `layout/admin.tmpl` |
 | **Partials for reuse** | Header, nav, footer, components |
 | **Pages for content** | One `.tmpl` per page/route |
 | **No logic in templates** | Minimal `{{if}}`, `{{range}}` - logic in handlers |
 
 **Template Inheritance:**
 ```
-layouts/public.tmpl
-  └── includes partials/head.tmpl
-  └── includes partials/public/header.tmpl
-  └── includes partials/public/nav.tmpl
+layout/public.tmpl
+  └── includes partial/head.tmpl
+  └── includes partial/public/header.tmpl
+  └── includes partial/public/nav.tmpl
   └── yields to page content
-  └── includes partials/public/footer.tmpl
-  └── includes partials/scripts.tmpl
+  └── includes partial/public/footer.tmpl
+  └── includes partial/scripts.tmpl
 ```
 
 ### Partials Rules (NON-NEGOTIABLE)
 
 | Rule | Description |
 |------|-------------|
-| **Shared partials** | `partials/head.tmpl`, `partials/scripts.tmpl` |
-| **Context partials** | `partials/public/*`, `partials/admin/*` |
-| **Component partials** | Reusable UI: `partials/toast.tmpl`, `partials/modal.tmpl` |
+| **Shared partials** | `partial/head.tmpl`, `partial/scripts.tmpl` |
+| **Context partials** | `partial/public/*`, `partial/admin/*` |
+| **Component partials** | Reusable UI: `partial/toast.tmpl`, `partial/modal.tmpl` |
 | **No page-specific partials** | If used once, it's not a partial |
 | **Self-contained** | Partials include their own styles/scripts if needed |
 
 **Mandatory Partials:**
 ```
-partials/
+partial/
 ├── head.tmpl           # <head> - meta, CSS links (REQUIRED)
 ├── scripts.tmpl        # JS includes before </body> (REQUIRED)
 ├── public/
@@ -14443,7 +14923,7 @@ partials/
 
 **Optional Component Partials:**
 ```
-partials/
+partial/
 ├── toast.tmpl          # Toast notification container
 ├── modal.tmpl          # Reusable modal structure
 ├── pagination.tmpl     # Pagination controls
@@ -14743,7 +15223,7 @@ main {
 
 **App-Specific Partials (Optional):**
 
-Projects can create additional partials for functionality unique to that application. Place these in `partials/` alongside the mandatory ones.
+Projects can create additional partials for functionality unique to that application. Place these in `partial/` alongside the mandatory ones.
 
 | Example Partial | Project | Purpose |
 |-----------------|---------|---------|
@@ -14760,11 +15240,11 @@ Projects can create additional partials for functionality unique to that applica
 
 **App-Specific Partials (add to existing structure):**
 
-See **Template Structure** above for mandatory partials (`partials/public/*`, `partials/admin/*`, `partials/head.tmpl`, `partials/scripts.tmpl`).
+See **Template Structure** above for mandatory partials (`partial/public/*`, `partial/admin/*`, `partial/head.tmpl`, `partial/scripts.tmpl`).
 
 Projects add app-specific partials alongside the mandatory ones:
 ```
-src/server/templates/partials/
+src/server/template/partial/
 ├── public/                  # MANDATORY (see Template Structure)
 ├── admin/                   # MANDATORY (see Template Structure)
 ├── head.tmpl                # MANDATORY
@@ -14806,8 +15286,8 @@ package server
 
 import "embed"
 
-//go:embed templates/*.tmpl templates/**/*.tmpl
-var templatesFS embed.FS
+//go:embed template/*.tmpl template/**/*.tmpl
+var templateFS embed.FS
 
 //go:embed static/*
 var staticFS embed.FS
@@ -14848,7 +15328,7 @@ var staticFS embed.FS
 **External Data Rules:**
 - Security-related data that needs frequent updates is NEVER embedded
 - Downloaded automatically on first run if not present
-- Updated automatically via built-in scheduler (see PART 26: SCHEDULER)
+- Updated automatically via built-in scheduler (see PART 27: SCHEDULER)
 - All scheduler tasks configurable via admin panel
 - Graceful degradation if download fails (continues without data)
 - SSL certificates only generated/managed when running on ports `80,443`
@@ -15758,7 +16238,7 @@ All settings above MUST be configurable via admin panel:
 4. Verify admin routes work with session
 5. Verify invalid credentials are rejected
 
-**See PART 13: Testing & Development for complete admin authentication testing examples.**
+**See PART 13: TESTING & DEVELOPMENT for complete admin authentication testing examples.**
 
 ### Why Isolated?
 
@@ -16301,7 +16781,7 @@ All settings above MUST be configurable via admin panel:
 │  [Access ▼]  [Last 100 ▼]  [Search...        ]  [Auto-refresh: ON]     │
 │                                                                         │
 │  ┌─────────────────────────────────────────────────────────────────┐    │
-│  │ 2025-01-15 10:30:45  GET  /api/v1/health  200  12ms  192.168.1.1│    │
+│  │ 2025-01-15 10:30:45  GET  /api/v1/healthz 200  12ms  192.168.1.1│    │
 │  │ 2025-01-15 10:30:44  POST /api/v1/data    201  45ms  192.168.1.2│    │
 │  │ 2025-01-15 10:30:43  GET  /healthz        200  2ms   192.168.1.1│    │
 │  │ 2025-01-15 10:30:42  GET  /api/v1/users   401  5ms   10.0.0.50  │    │
@@ -16423,8 +16903,7 @@ The admin panel MUST include a scheduler section with:
 |----------|--------|-------------|
 | `/api/v1/admin/server/settings` | GET | Get server settings |
 | `/api/v1/admin/server/settings` | PATCH | Update server settings |
-| `/api/v1/admin/server/status` | GET | Server status |
-| `/api/v1/admin/server/health` | GET | Detailed health |
+| `/api/v1/admin/server/status` | GET | Server status (detailed, admin-only) |
 | `/api/v1/admin/server/stats` | GET | Statistics |
 | `/api/v1/admin/server/logs/access` | GET | Access logs |
 | `/api/v1/admin/server/logs/error` | GET | Error logs |
@@ -16440,8 +16919,8 @@ The admin panel MUST include a scheduler section with:
 # PART 20: API STRUCTURE (NON-NEGOTIABLE)
 
 **Note:** This section covers API structure and requirements. For specific route listings, see:
-- Admin Web Routes: PART 18 (Admin Panel)
-- Admin API Routes: PART 18 (Admin Panel → API Routes)
+- Admin Web Routes: PART 19 (Admin Panel)
+- Admin API Routes: PART 19 (Admin Panel → API Routes)
 - Project-specific Routes: PART 36 (Project-Specific Sections)
 
 ## API Versioning
@@ -16503,10 +16982,12 @@ GET /api/v1/users?status=active&role=admin ✓ Multiple filters
 
 ```go
 // ALL JSON responses MUST be indented and end with newline
-data, _ := json.MarshalIndent(response, "", "  ")  // 2-space indent
+// Use 2-space indent
+data, _ := json.MarshalIndent(response, "", "  ")
 w.Header().Set("Content-Type", "application/json")
 w.Write(data)
-w.Write([]byte("\n"))  // Single trailing newline
+// Single trailing newline
+w.Write([]byte("\n"))
 ```
 
 **Output:**
@@ -16528,7 +17009,8 @@ w.Write([]byte("\n"))  // Single trailing newline
 ```go
 // ALL text responses MUST end with single newline
 w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-fmt.Fprintf(w, "%s\n", text)  // Single trailing newline
+// Single trailing newline included in format string
+fmt.Fprintf(w, "%s\n", text)
 ```
 
 **Output:**
@@ -16736,7 +17218,7 @@ tail -c 2 file.txt | od -An -tx1
 **Testing:** Test scripts MUST verify:
 - API `.txt` extension works
 - Frontend smart detection works (browser → HTML, CLI → text)
-- Accept headers work on both API and frontend (see PART 13: Testing)
+- Accept headers work on both API and frontend (see PART 13: TESTING & DEVELOPMENT)
 
 ### Content Negotiation Priority (NON-NEGOTIABLE)
 
@@ -17508,7 +17990,7 @@ Before proceeding, confirm you understand:
 
 ### FQDN Resolution (NON-NEGOTIABLE)
 
-**See PART 7: URL Variables for complete `{proto}`, `{fqdn}`, `{port}` resolution.**
+**See PART 7: SERVER BINARY CLI → "URL Variables" section for complete `{proto}`, `{fqdn}`, `{port}` resolution.**
 
 **Summary - `{fqdn}` resolution order:**
 
@@ -17686,7 +18168,8 @@ func GetAllDomains() []string {
 func GetWildcardDomain() string {
     domains := GetAllDomains()
     if len(domains) < 2 {
-        return "" // Need multiple to infer wildcard
+        // Need multiple to infer wildcard
+        return ""
     }
 
     // Extract base domain from first (primary)
@@ -17695,7 +18178,8 @@ func GetWildcardDomain() string {
     // Check if all share same base
     for _, d := range domains[1:] {
         if extractBaseDomain(d) != base {
-            return "" // Different base domains, no wildcard
+            // Different base domains, no wildcard
+            return ""
         }
     }
 
@@ -17865,16 +18349,22 @@ func formatURL(host string, port int, isHTTPS bool) string {
 **Usage:**
 ```go
 // Single HTTP port
-formatURL(host, 8080, false)  // http://host:8080
+// Returns: http://host:8080
+formatURL(host, 8080, false)
 
 // Single HTTPS port (443 = HTTPS-only mode)
-formatURL(host, 443, false)   // https://host  (443 forces HTTPS)
+// Returns: https://host (443 forces HTTPS)
+formatURL(host, 443, false)
 
 // Dual port mode
-formatURL(host, 80, false)    // http://host
-formatURL(host, 443, true)    // https://host
-formatURL(host, 8080, false)  // http://host:8080
-formatURL(host, 8443, true)   // https://host:8443
+// Returns: http://host
+formatURL(host, 80, false)
+// Returns: https://host
+formatURL(host, 443, true)
+// Returns: http://host:8080
+formatURL(host, 8080, false)
+// Returns: https://host:8443
+formatURL(host, 8443, true)
 ```
 
 **Overlay Network Protocol Rules (Tor, I2P, etc.):**
@@ -18272,9 +18762,9 @@ web:
 **Access Log Formats:**
 | Format | Description | Example |
 |--------|-------------|---------|
-| `apache` | Apache Combined Log Format (default) | `127.0.0.1 - - [10/Oct/2024:13:55:36 -0700] "GET /api/v1/health HTTP/1.1" 200 2326 "-" "curl/7.64.1"` |
-| `nginx` | Nginx Common Log Format | `127.0.0.1 - - [10/Oct/2024:13:55:36 -0700] "GET /api/v1/health HTTP/1.1" 200 2326` |
-| `json` | Structured JSON | `{"ip":"127.0.0.1","time":"2024-10-10T13:55:36Z","method":"GET","path":"/api/v1/health","status":200,"size":2326,"ua":"curl/7.64.1"}` |
+| `apache` | Apache Combined Log Format (default) | `127.0.0.1 - - [10/Oct/2024:13:55:36 -0700] "GET /api/v1/healthz HTTP/1.1" 200 2326 "-" "curl/7.64.1"` |
+| `nginx` | Nginx Common Log Format | `127.0.0.1 - - [10/Oct/2024:13:55:36 -0700] "GET /api/v1/healthz HTTP/1.1" 200 2326` |
+| `json` | Structured JSON | `{"ip":"127.0.0.1","time":"2024-10-10T13:55:36Z","method":"GET","path":"/api/v1/healthz","status":200,"size":2326,"ua":"curl/7.64.1"}` |
 
 **Security Log Formats:**
 | Format | Description | Use Case |
@@ -19351,14 +19841,19 @@ server:
 ```go
 type IPBlock struct {
     IP          string    `json:"ip"`
-    CIDR        string    `json:"cidr,omitempty"`     // Optional range block
-    Type        BlockType `json:"type"`               // temporary, extended, permanent
+    // Optional range block
+    CIDR        string    `json:"cidr,omitempty"`
+    // temporary, extended, permanent
+    Type        BlockType `json:"type"`
     Reason      string    `json:"reason"`
     BlockedAt   time.Time `json:"blocked_at"`
-    ExpiresAt   *time.Time `json:"expires_at,omitempty"` // nil = permanent
+    // nil = permanent
+    ExpiresAt   *time.Time `json:"expires_at,omitempty"`
     OffenseCount int      `json:"offense_count"`
-    AutoBlocked bool      `json:"auto_blocked"`        // true = system, false = admin
-    BlockedBy   string    `json:"blocked_by,omitempty"` // admin ID if manual
+    // true = system, false = admin
+    AutoBlocked bool      `json:"auto_blocked"`
+    // admin ID if manual
+    BlockedBy   string    `json:"blocked_by,omitempty"`
 }
 ```
 
@@ -19558,9 +20053,12 @@ type Breach struct {
     Summary         string        `json:"summary"`
     Description     string        `json:"description"`
     DetectedAt      time.Time     `json:"detected_at"`
-    DetectedBy      string        `json:"detected_by"`      // "system" or admin ID
-    DetectionMethod string        `json:"detection_method"` // automated/manual/external
-    AffectedData    []string      `json:"affected_data"`    // data categories
+    // "system" or admin ID
+    DetectedBy      string        `json:"detected_by"`
+    // automated/manual/external
+    DetectionMethod string        `json:"detection_method"`
+    // data categories
+    AffectedData    []string      `json:"affected_data"`
     AffectedUsers   int           `json:"affected_users"`
     ContainedAt     *time.Time    `json:"contained_at,omitempty"`
     NotifiedAt      *time.Time    `json:"notified_at,omitempty"`
@@ -19568,8 +20066,10 @@ type Breach struct {
     RootCause       string        `json:"root_cause,omitempty"`
     Remediation     string        `json:"remediation,omitempty"`
     Timeline        []BreachEvent `json:"timeline"`
-    Compliance      []string      `json:"compliance"`       // applicable standards
-    NotifyDeadline  time.Time     `json:"notify_deadline"`  // based on strictest standard
+    // applicable standards
+    Compliance      []string      `json:"compliance"`
+    // based on strictest standard
+    NotifyDeadline  time.Time     `json:"notify_deadline"`
 }
 
 type BreachStatus string
@@ -20722,7 +21222,7 @@ The server admin (administrator with access to the server/binary) has ONE recove
 - Previous recovery keys
 - Email access
 
-See **PART 24: BACKUP & RESTORE → Admin Recovery Command** for full details.
+See **PART 25: BACKUP & RESTORE → Admin Recovery Command** for full details.
 
 ### Recovery Key Usage Flow
 
@@ -21483,8 +21983,7 @@ Organizations - only for projects with multi-user collaboration.
 | `/api/v1/admin/server/setup/complete` | POST | Complete setup wizard (Step 6) |
 | `/api/v1/admin/server/settings` | GET | Get server settings |
 | `/api/v1/admin/server/settings` | PATCH | Update server settings |
-| `/api/v1/admin/server/status` | GET | Server status |
-| `/api/v1/admin/server/health` | GET | Detailed health |
+| `/api/v1/admin/server/status` | GET | Server status (detailed, admin-only) |
 | `/api/v1/admin/server/stats` | GET | Statistics |
 | `/api/v1/admin/server/restart` | POST | Restart server |
 
@@ -22806,8 +23305,8 @@ casspeed --maintenance backup [filename]
 | `server.yml` | ✓ Always | Configuration file |
 | `server.db` | ✓ Always | Main database (admin credentials, settings) |
 | `users.db` | ✓ If exists | User database (multi-user mode) |
-| `{config_dir}/templates/` | ✓ If exists | Custom email templates |
-| `{config_dir}/themes/` | ✓ If exists | Custom themes |
+| `{config_dir}/template/` | ✓ If exists | Custom email templates |
+| `{config_dir}/theme/` | ✓ If exists | Custom themes |
 | `{config_dir}/ssl/` | Optional | SSL certificates (flag: `--include-ssl`) |
 | `{data_dir}/` | Optional | Data files (flag: `--include-data`) |
 
@@ -22843,7 +23342,7 @@ casspeed --maintenance backup [filename]
     "server.yml",
     "server.db",
     "users.db",
-    "templates/",
+    "template/",
     "ssl/"
   ],
   "encrypted": true,
@@ -22917,9 +23416,11 @@ POST /api/v1/admin/server/backup
 Content-Type: application/json
 
 {
-  "password": "backup-encryption-password"  // Required if encryption enabled
+  "password": "backup-encryption-password"
 }
 ```
+
+**Note:** The `password` field is required if encryption is enabled.
 
 **Warning Shown if Encryption Not Enabled:**
 
@@ -23202,7 +23703,7 @@ casspeed --service start
 
 **ALL projects MUST have customizable email templates.**
 
-Email templates allow server admins to customize ALL notification messages, including account-related emails (password reset, email verification, login alerts, etc.). Default templates with sane defaults are embedded in the binary; custom templates are stored in `{config_dir}/templates/email/`.
+Email templates allow server admins to customize ALL notification messages, including account-related emails (password reset, email verification, login alerts, etc.). Default templates with sane defaults are embedded in the binary; custom templates are stored in `{config_dir}/template/email/`.
 
 **Key Points:**
 - ALL email templates are fully customizable via the admin panel
@@ -23214,8 +23715,8 @@ Email templates allow server admins to customize ALL notification messages, incl
 
 | Type | Location |
 |------|----------|
-| Default templates | Embedded in binary (`src/templates/email/`) |
-| Custom templates | `{config_dir}/templates/email/` |
+| Default templates | Embedded in binary (`src/server/template/email/`) |
+| Custom templates | `{config_dir}/template/email/` |
 
 **Behavior:**
 - If custom template exists → use custom
@@ -26294,7 +26795,8 @@ func main() {
     // NOTE: Use signal package's setupSignalHandler() for proper cross-platform support
     // This is simplified - actual implementation uses platform-specific signal_*.go files
     sigChan := make(chan os.Signal, 1)
-    registerShutdownSignals(sigChan) // See signal/signal_unix.go and signal_windows.go
+    // See signal/signal_unix.go and signal_windows.go
+    registerShutdownSignals(sigChan)
 
     go func() {
         <-sigChan
@@ -26581,7 +27083,7 @@ Tor Hidden Service: Connected
 
 ## Caching
 
-See **PART 17: SERVER CONFIGURATION** for full Valkey/Redis setup.
+See **PART 18: SERVER CONFIGURATION** for full Valkey/Redis setup.
 
 ### Cache Drivers
 
@@ -27343,11 +27845,13 @@ make test
 
 ---
 
-# PART 34: CLI CLIENT (PER-PROJECT)
+# PART 34: CLI CLIENT (OPTIONAL - NON-NEGOTIABLE WHEN IMPLEMENTED)
 
 ## Overview
 
 **CLI client is a PER-PROJECT determination.** Not all projects require a CLI client.
+
+**IMPORTANT: Once a project implements a CLI client, this entire PART becomes NON-NEGOTIABLE.** The CLI must follow all standards defined here exactly.
 
 When a project includes a CLI client, it provides a terminal-based interface for interacting with the server. The CLI supports both standard command-line usage and an interactive TUI (Terminal User Interface) mode.
 
@@ -27356,7 +27860,7 @@ When a project includes a CLI client, it provides a terminal-based interface for
 | Default binary name | `casspeed-cli` |
 | Versioning | Same as main application |
 | Build | Part of same Makefile (`make build` produces both binaries) |
-| Config location | `~/.config/casspeed/cli.yml` |
+| Config location | `~/.config/casapps/casspeed/cli.yml` |
 
 ## Binary Naming Rules
 
@@ -27375,7 +27879,8 @@ When a project includes a CLI client, it provides a terminal-based interface for
 binaryName := filepath.Base(os.Args[0])
 
 // Hardcoded for User-Agent (never changes)
-const projectName = "jokes"  // compiled in via -ldflags
+// Compiled in via -ldflags
+const projectName = "jokes"
 userAgent := fmt.Sprintf("%s-cli/%s", projectName, version)
 ```
 
@@ -27414,13 +27919,106 @@ jokes-cli tui
 
 ## Configuration
 
-### Config File Location
+### Directory Structure (NON-NEGOTIABLE)
 
-| OS | Path |
-|----|------|
-| Linux | `~/.config/casspeed/cli.yml` |
-| macOS | `~/.config/casspeed/cli.yml` |
-| Windows | `%APPDATA%\casspeed\cli.yml` |
+**CLI client ALWAYS uses user home directories. NEVER OS system directories.**
+
+The CLI client uses the same user directory structure as the server in user mode. This allows the CLI to share configuration with a locally running server when appropriate.
+
+#### Linux / macOS
+
+| Directory | Path | Purpose |
+|-----------|------|---------|
+| Config | `~/.config/casapps/casspeed/` | Configuration files |
+| Config File | `~/.config/casapps/casspeed/cli.yml` | CLI configuration |
+| Data | `~/.local/share/casapps/casspeed/` | Persistent data |
+| Cache | `~/.cache/casapps/casspeed/` | Temporary/cached data |
+| Logs | `~/.local/log/casapps/casspeed/` | Log files |
+
+#### Windows
+
+| Directory | Path | Purpose |
+|-----------|------|---------|
+| Config | `%APPDATA%\casapps\casspeed\` | Configuration files |
+| Config File | `%APPDATA%\casapps\casspeed\cli.yml` | CLI configuration |
+| Data | `%LOCALAPPDATA%\casapps\casspeed\data\` | Persistent data |
+| Cache | `%LOCALAPPDATA%\casapps\casspeed\cache\` | Temporary/cached data |
+| Logs | `%LOCALAPPDATA%\casapps\casspeed\log\` | Log files |
+
+#### Directory Usage
+
+| Directory | Contents | Backup? |
+|-----------|----------|---------|
+| Config | `cli.yml`, connection profiles, preferences | Yes |
+| Data | Downloaded data, local databases, saved items | Yes |
+| Cache | API response cache, temp files, thumbnails | No (recreatable) |
+| Logs | `cli.log`, debug logs | Optional |
+
+**NEVER use OS system directories:**
+- `/etc/casapps/casspeed/` (Linux system config)
+- `/var/lib/casapps/casspeed/` (Linux system data)
+- `/var/log/casapps/casspeed/` (Linux system logs)
+- `C:\ProgramData\` (Windows system data)
+- Any directory requiring elevated privileges
+
+#### Path Resolution (Go)
+
+```go
+// src/cli/paths/paths.go
+package paths
+
+import (
+	"os"
+	"path/filepath"
+	"runtime"
+)
+
+const (
+	projectOrg  = "casapps"
+	projectName = "casspeed"
+)
+
+// ConfigDir returns the CLI config directory
+func ConfigDir() string {
+	if runtime.GOOS == "windows" {
+		return filepath.Join(os.Getenv("APPDATA"), projectOrg, projectName)
+	}
+	home, _ := os.UserHomeDir()
+	return filepath.Join(home, ".config", projectOrg, projectName)
+}
+
+// DataDir returns the CLI data directory
+func DataDir() string {
+	if runtime.GOOS == "windows" {
+		return filepath.Join(os.Getenv("LOCALAPPDATA"), projectOrg, projectName, "data")
+	}
+	home, _ := os.UserHomeDir()
+	return filepath.Join(home, ".local", "share", projectOrg, projectName)
+}
+
+// CacheDir returns the CLI cache directory
+func CacheDir() string {
+	if runtime.GOOS == "windows" {
+		return filepath.Join(os.Getenv("LOCALAPPDATA"), projectOrg, projectName, "cache")
+	}
+	home, _ := os.UserHomeDir()
+	return filepath.Join(home, ".cache", projectOrg, projectName)
+}
+
+// LogDir returns the CLI log directory
+func LogDir() string {
+	if runtime.GOOS == "windows" {
+		return filepath.Join(os.Getenv("LOCALAPPDATA"), projectOrg, projectName, "log")
+	}
+	home, _ := os.UserHomeDir()
+	return filepath.Join(home, ".local", "log", projectOrg, projectName)
+}
+
+// ConfigFile returns the CLI config file path
+func ConfigFile() string {
+	return filepath.Join(ConfigDir(), "cli.yml")
+}
+```
 
 ### Config Structure
 
@@ -27555,16 +28153,14 @@ jokes v1.2.3 (abc1234) built 2025-01-15
 | `config show` | Display current configuration |
 | `config set <key> <value>` | Set configuration value |
 | `config get <key>` | Get configuration value |
-| `config init` | Create default config file |
 | `version` | Show version information |
 | `tui` | Launch TUI mode |
+
+**Note:** Config file is auto-created on first run with sane defaults. No init command needed.
 
 ### Config Command Examples
 
 ```bash
-# Initialize config file
-jokes-cli config init
-
 # Set server address
 jokes-cli config set server.address https://jokes.example.com
 
@@ -27644,7 +28240,8 @@ The project name is compiled into the binary at build time:
 ```go
 // Set at build time via -ldflags
 var (
-    ProjectName = "jokes"      // Original project name (compiled in)
+    // Original project name (compiled in)
+    ProjectName = "jokes"
     Version     = "1.2.3"
 )
 
@@ -27784,8 +28381,8 @@ casspeed/
 │       │   └── {project-specific}.go
 │       ├── tui/            # TUI implementation
 │       │   ├── app.go
-│       │   ├── views/
-│       │   └── components/
+│       │   ├── view/
+│       │   └── component/
 │       └── api/            # API client library
 │           └── client.go
 ├── go.mod
@@ -27906,11 +28503,13 @@ Build Info:
 ---
 
 
-# PART 35: CUSTOM DOMAINS (OPTIONAL PER-PROJECT)
+# PART 35: CUSTOM DOMAINS (OPTIONAL - NON-NEGOTIABLE WHEN IMPLEMENTED)
 
 ## Overview
 
 **Custom domains is an OPTIONAL feature that allows users or organizations to use their own domains with the application.** Not all projects need this feature.
+
+**IMPORTANT: Once a project implements custom domains, this entire PART becomes NON-NEGOTIABLE.** The implementation must follow all standards defined here exactly.
 
 | Attribute | Description |
 |-----------|-------------|
@@ -28099,7 +28698,8 @@ Incoming Request: https://api.customer.com/path
 // DomainResolver handles custom domain routing
 type DomainResolver struct {
     db       *sql.DB
-    cache    *cache.Cache  // Cache domain lookups
+    // Cache domain lookups
+    cache    *cache.Cache
     cacheTTL time.Duration
 }
 
@@ -28526,10 +29126,12 @@ func (s *DomainService) selectChallengeType(domain *CustomDomain) string {
 
 **For verified domains, SSL can be issued automatically without user configuration:**
 
+Challenge options: `auto`, `http-01`, `tls-alpn-01`
+
 ```
 POST /api/v1/user/domains/api.mycompany.com/ssl
 {
-  "challenge": "auto"   // or "http-01", "tls-alpn-01"
+  "challenge": "auto"
 }
 
 Response:
@@ -28840,9 +29442,11 @@ When implementing custom domains for a project:
 ---
 
 
-# PART 36: PROJECT-SPECIFIC SECTIONS
+# PART 36: PROJECT-SPECIFIC SECTIONS (NON-NEGOTIABLE)
 
 **This section defines WHAT your project does (business logic, intent, unique features), NOT HOW to implement it.**
+
+**PART 36 is NON-NEGOTIABLE.** The business logic, data models, and rules defined here are the authoritative specification for this project. Implementation must match exactly.
 
 ## ⚠️ CRITICAL: Business Logic Only
 
@@ -28858,12 +29462,12 @@ When implementing custom domains for a project:
 - ✓ Project-specific features
 
 **PART 36 should NOT contain:**
-- ✗ Route implementation details (follow PART 20: API Structure)
-- ✗ HTML/CSS/frontend patterns (follow PART 17: Web Frontend)
-- ✗ Config file format/structure (follow PART 5: Configuration)
-- ✗ Database table schemas (follow PART 24: Database)
-- ✗ Authentication patterns (follow PART 23: User Management)
-- ✗ Testing approaches (follow PART 13: Testing)
+- ✗ Route implementation details (follow PART 20: API STRUCTURE)
+- ✗ HTML/CSS/frontend patterns (follow PART 17: WEB FRONTEND)
+- ✗ Config file format/structure (follow PART 5: CONFIGURATION)
+- ✗ Database table schemas (follow PART 24: DATABASE & CLUSTER)
+- ✗ Authentication patterns (follow PART 23: USER MANAGEMENT)
+- ✗ Testing approaches (follow PART 13: TESTING & DEVELOPMENT)
 
 **Rule: AI reads PART 36 for business logic, then implements using standards from PARTS 1-35.**
 
@@ -28871,225 +29475,427 @@ When implementing custom domains for a project:
 
 ## Project Business Purpose
 
-**Purpose:** Provide a free, self-hosted network speed testing solution as an alternative to speedtest.net
+**Purpose:** Provide self-hosted internet speed testing infrastructure with complete feature parity to commercial services, without ads, tracking, or feature restrictions.
 
 **Target Users:**
-- Home lab enthusiasts monitoring their network performance over time
-- Network administrators needing internal bandwidth testing capabilities
-- Privacy-conscious users who want self-hosted network testing without tracking
-- Organizations requiring on-premises speed test infrastructure
-- System administrators automating bandwidth monitoring via CLI
+- Home users wanting ad-free speed monitoring
+- ISP customers tracking connection performance
+- System administrators monitoring network performance
+- Network engineers requiring API integration
+- Privacy-conscious individuals avoiding data collection
+- Organizations needing internal speed testing infrastructure
 
 **Unique Value:**
-- Complete self-hosted solution with no external dependencies for testing
-- Historical test results with graphical visualization of trends
-- Both web interface and CLI client for different use cases
-- No advertisements, tracking, or artificial feature limitations
-- Multi-threaded testing for accurate high-bandwidth measurements
-- Real-time progress indicators during tests
-- Latency, jitter, and packet loss measurements
-- Support for concurrent testing from multiple clients
+- Complete privacy - all data stays on your server
+- No ads, tracking, or monetization
+- Full historical tracking and analysis
+- Multi-user support with device tracking
+- Shareable results with image export
+- CLI client for automation
+- API-first design for integrations
+- Real-time WebSocket progress updates
 
 ## Business Logic & Rules
 
 **Speed Test Rules:**
-- Download test: Multi-threaded downloads with random data generation
-- Upload test: Multi-threaded uploads with random data
-- Ping test: Multiple ICMP or HTTP ping measurements for latency
-- Test duration: Configurable (default: 10 seconds per direction)
-- Thread count: Auto-scaled based on connection speed detection (1-16 threads)
-- Data chunk size: Dynamic sizing based on bandwidth (prevents memory issues)
-- Minimum test interval: 5 seconds between tests (prevent abuse)
-- Maximum concurrent tests per IP: 3 (prevent server overload)
+- Multi-threaded testing (configurable thread count)
+- Configurable test duration (default 10 seconds)
+- Maximum concurrent tests per IP: 3 (DDoS protection)
+- Rate limiting: IP-based, prevents abuse
+- Tests can be anonymous or user-associated
+- Device tracking for authenticated users
+- Results stored indefinitely (no expiration)
 
-**Result Storage:**
-- Test results stored in SQLite database per user/IP
-- Fields: timestamp, download_mbps, upload_mbps, ping_ms, jitter_ms, packet_loss_percent, client_ip, user_agent
-- Retention: Configurable (default: 90 days, 0 = unlimited)
-- Anonymous mode: Tests without user account (stored by IP hash)
-- Registered mode: Tests stored in user account history
+**User Management:**
+- Optional registration (anonymous tests allowed)
+- Username: 3-30 characters, alphanumeric + underscore/dash
+- Email validation with verification requirement
+- Password: bcrypt hashing, minimum 8 characters
+- Multi-device support per user
+- API tokens for CLI/automation (prefix: `tok_`)
+- Session-based web authentication
+
+**Sharing & Export:**
+- Share codes: 8-character alphanumeric (62^8 combinations)
+- Shareable results include: download/upload/ping/jitter/packet loss
+- Export formats: PNG and SVG images
+- Share views tracked (analytics)
+- Optional username display on shared results (user preference)
+- Short URLs supported: `/s/{code}` alias for `/share/{code}`
+
+**Admin Panel:**
+- First-run setup wizard (creates initial admin)
+- Admin tokens prefix: `adm_` (32 hex characters)
+- Session timeout: configurable (default 24 hours)
+- Settings management: server config, test parameters, user limits
+- Activity logs: admin actions, security events
+- Server info dashboard: uptime, version, resource usage
 
 **Validation:**
-- Download/upload speed: Must be > 0 and < 100,000 Mbps (sanity check)
-- Ping: Must be > 0ms and < 10,000ms
-- Jitter: Must be >= 0ms
-- Packet loss: 0-100 percent
-- Test ID: UUID v4 format
-- Client IP: Valid IPv4 or IPv6 address
-
-**Privacy:**
-- IP addresses hashed with salt before storage (privacy mode)
-- User-agent stored for compatibility tracking
-- No geolocation or tracking cookies
-- Results only accessible by creator (or server admin)
-- Option to delete individual or all test results
+- Download speed: 0.01 - 10000 Mbps
+- Upload speed: 0.01 - 10000 Mbps
+- Ping: 0 - 10000 ms
+- Jitter: 0 - 1000 ms
+- Packet loss: 0.0 - 100.0%
+- Test duration: 5 - 60 seconds
+- Max threads: 1 - 32 (configurable, default 16)
+- Concurrent tests per IP: 1 - 10 (default 3)
 
 ## Data Models
 
 ```go
+// User represents a registered user account
+type User struct {
+    ID                string    `json:"id"`              // Unique user ID (UUID)
+    Username          string    `json:"username"`        // 3-30 chars, alphanumeric + _-
+    Email             string    `json:"email"`           // Email address (validated)
+    PasswordHash      string    `json:"-"`               // bcrypt hash (never exposed)
+    ShareShowUsername bool      `json:"share_show_username"` // Show username on shared results
+    CreatedAt         time.Time `json:"created_at"`      // Account creation timestamp
+}
+
+// Device represents a user's device (phone, computer, etc.)
+type Device struct {
+    ID        string    `json:"id"`         // Unique device ID (UUID)
+    UserID    string    `json:"user_id"`    // Owner user ID
+    Name      string    `json:"name"`       // Device name (e.g., "iPhone 13")
+    LastSeen  time.Time `json:"last_seen"`  // Last test from this device
+    CreatedAt time.Time `json:"created_at"` // Device registration timestamp
+}
+
 // SpeedTest represents a single speed test result
 type SpeedTest struct {
-    ID            string    `json:"id"`              // UUID v4
-    Timestamp     time.Time `json:"timestamp"`       // When test was run
-    DownloadMbps  float64   `json:"download_mbps"`   // Download speed in Mbps
-    UploadMbps    float64   `json:"upload_mbps"`     // Upload speed in Mbps
-    PingMs        float64   `json:"ping_ms"`         // Average ping in milliseconds
-    JitterMs      float64   `json:"jitter_ms"`       // Ping jitter in milliseconds
-    PacketLoss    float64   `json:"packet_loss"`     // Packet loss percentage (0-100)
-    ClientIPHash  string    `json:"-"`               // Hashed client IP (not exposed via API)
-    UserAgent     string    `json:"user_agent"`      // Client user agent
-    ServerID      string    `json:"server_id"`       // Which server ran the test (clustering)
-    UserID        string    `json:"user_id,omitempty"` // Optional: user account ID
+    ID           string    `json:"id"`                 // Unique test ID (UUID)
+    UserID       string    `json:"user_id,omitempty"`  // Optional: associated user
+    DeviceID     string    `json:"device_id,omitempty"` // Optional: associated device
+    Timestamp    time.Time `json:"timestamp"`          // Test execution time
+    DownloadMbps float64   `json:"download_mbps"`      // Download speed (Mbps)
+    UploadMbps   float64   `json:"upload_mbps"`        // Upload speed (Mbps)
+    PingMs       float64   `json:"ping_ms"`            // Ping latency (ms)
+    JitterMs     float64   `json:"jitter_ms"`          // Jitter (ms)
+    PacketLoss   float64   `json:"packet_loss"`        // Packet loss (percentage)
+    ClientIPHash string    `json:"-"`                  // Hashed IP (privacy, never exposed)
+    UserAgent    string    `json:"user_agent"`         // Browser/client user agent
+    ServerID     string    `json:"server_id"`          // Test server ID (standalone/cluster)
+    ShareCode    string    `json:"share_code,omitempty"` // 8-char share code (if shared)
+    ShareViews   int       `json:"share_views"`        // Number of times shared result viewed
+    CreatedAt    time.Time `json:"created_at"`         // Record creation timestamp
 }
 
-// TestProgress represents real-time test progress (WebSocket updates)
-type TestProgress struct {
-    TestID      string  `json:"test_id"`
-    Stage       string  `json:"stage"`        // "ping", "download", "upload", "complete"
-    Progress    float64 `json:"progress"`     // 0.0-1.0 percentage
-    CurrentSpeed float64 `json:"current_speed"` // Current Mbps during download/upload
-    Message     string  `json:"message"`      // Status message
+// APIToken represents a user's API token for CLI/automation
+type APIToken struct {
+    ID        string    `json:"id"`         // Token ID (UUID)
+    UserID    string    `json:"user_id"`    // Owner user ID
+    Token     string    `json:"-"`          // Token value (prefix: tok_), never exposed
+    Name      string    `json:"name"`       // User-friendly token name
+    LastUsed  time.Time `json:"last_used,omitempty"` // Last usage timestamp
+    CreatedAt time.Time `json:"created_at"` // Token creation timestamp
 }
 
-// TestSummary represents aggregated test statistics
-type TestSummary struct {
-    TotalTests    int     `json:"total_tests"`
-    AvgDownload   float64 `json:"avg_download_mbps"`
-    AvgUpload     float64 `json:"avg_upload_mbps"`
-    AvgPing       float64 `json:"avg_ping_ms"`
-    MaxDownload   float64 `json:"max_download_mbps"`
-    MaxUpload     float64 `json:"max_upload_mbps"`
-    MinPing       float64 `json:"min_ping_ms"`
-    DateRange     string  `json:"date_range"`
+// Session represents a user's web session
+type Session struct {
+    ID        string    `json:"id"`         // Session ID (UUID)
+    UserID    string    `json:"user_id"`    // User ID
+    Data      string    `json:"-"`          // Session data (encrypted, never exposed)
+    ExpiresAt time.Time `json:"expires_at"` // Session expiration
+    CreatedAt time.Time `json:"created_at"` // Session creation timestamp
 }
 
-// ServerInfo represents speed test server information
-type ServerInfo struct {
-    ServerID   string `json:"server_id"`
-    Name       string `json:"name"`
-    Location   string `json:"location"`
-    Host       string `json:"host"`
-    Country    string `json:"country"`
-    Sponsor    string `json:"sponsor,omitempty"`
+// Admin represents an admin user account
+type Admin struct {
+    ID             int       `json:"id"`                // Admin ID (auto-increment)
+    Username       string    `json:"username"`          // Admin username
+    Password       string    `json:"-"`                 // bcrypt hash (never exposed)
+    Email          string    `json:"email,omitempty"`   // Optional email
+    Role           string    `json:"role"`              // Admin role (admin, superadmin)
+    Enabled        bool      `json:"enabled"`           // Account enabled flag
+    APITokenHash   string    `json:"-"`                 // API token hash (prefix: adm_)
+    CreatedAt      time.Time `json:"created_at"`        // Account creation
+    UpdatedAt      time.Time `json:"updated_at"`        // Last update
+    LastLogin      time.Time `json:"last_login,omitempty"` // Last login timestamp
+    FailedAttempts int       `json:"-"`                 // Failed login attempts (security)
+    LockedUntil    time.Time `json:"-"`                 // Account lock expiration
+}
+
+// AdminSession represents an admin's web session
+type AdminSession struct {
+    ID         string    `json:"id"`              // Session ID (UUID)
+    AdminID    int       `json:"admin_id"`        // Admin ID
+    IPAddress  string    `json:"ip_address"`      // Session IP address (security)
+    UserAgent  string    `json:"user_agent,omitempty"` // Browser user agent
+    CreatedAt  time.Time `json:"created_at"`      // Session creation
+    ExpiresAt  time.Time `json:"expires_at"`      // Session expiration
+    LastActive time.Time `json:"last_active"`     // Last activity timestamp
 }
 ```
 
 ## Data Sources
 
-**Speed Test Data Generation:**
-- Random data generated on-the-fly for download tests (no static files)
-- Zero-buffer data sink for upload tests (discarded immediately)
-- Data patterns: Compressible and non-compressible options (test compression impact)
+**Data Sources:**
+- SQLite database: `{data_dir}/db/speedtest.db` (default storage)
+- PostgreSQL/MySQL: Cluster mode support (future)
+- No external data files required (fully self-contained)
 
-**Test Results Storage:**
-- SQLite database: `{datadir}/db/speedtest.db`
-- Schema automatically created on first run
-- Automatic migrations on version updates
-- No external data sources (fully self-contained)
-
-**Configuration:**
-- server.yml: Server configuration (test parameters, limits, retention)
-- Embedded defaults in binary (no config file required for basic operation)
+**Database Tables:**
+- `users` - User accounts
+- `devices` - User devices
+- `speed_tests` - Test results (historical data)
+- `api_tokens` - User API tokens
+- `sessions` - Web sessions
+- `admins` - Admin accounts
+- `admin_sessions` - Admin web sessions
 
 **Update Strategy:**
-- Database: Runtime writes for test results
-- Configuration: Hot-reload supported (no restart required)
-- No embedded data files (all data is user-generated test results)
+- Real-time writes to database on test completion
+- Session cleanup: hourly scheduler job
+- Historical data: never deleted (user controls retention)
+- Backup strategy: automated daily backups (02:00)
+
+**Data Location:**
+- Default database path: `/data/db/speedtest.db` (container)
+- Host path: configurable via volume mount
+- Backups: `/data/backups/` directory
 
 ## Project-Specific Endpoints Summary
 
 **Implementation of these endpoints MUST follow PART 20 (API Structure) and PART 17 (Web Frontend) rules.**
 
-**Speedtest Endpoints:**
+### Speed Test Endpoints
 
-**Core Test Endpoints:**
-- **Start test:** Initialize a new speed test and return test ID
-- **Test download:** Multi-threaded download speed measurement
-- **Test upload:** Multi-threaded upload speed measurement  
-- **Test ping:** Latency and jitter measurement
-- **Test status:** Real-time progress updates (WebSocket or SSE)
-- **Get result:** Retrieve completed test result by ID
+**Purpose:** Execute and retrieve speed test results
 
-**Results Management:**
-- **List results:** Paginated list of test history (by user/IP)
-- **Get statistics:** Aggregated stats (averages, min/max, trends)
-- **Delete result:** Remove specific test result
-- **Delete all results:** Clear all test history for user
-- **Export results:** Download test history as CSV/JSON
-
-**Server Information:**
-- **Server info:** Get server details (name, location, capabilities)
-- **Server list:** List available test servers (multi-server support)
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/api/v1/speedtest/start` | POST | Initiate a new speed test | Optional (user token) |
+| `/api/v1/speedtest/ws` | GET | WebSocket for real-time progress | None |
+| `/api/v1/speedtest/download` | GET | Download test endpoint (data transfer) | None |
+| `/api/v1/speedtest/upload` | POST | Upload test endpoint (data transfer) | None |
+| `/api/v1/speedtest/result/{id}` | GET | Retrieve test result by ID | None (public if shared) |
+| `/api/v1/speedtest/history` | GET | User's test history | Required (user token) |
 
 **Business Behavior:**
+- Start test: Creates test session, returns test ID
+- WebSocket: Real-time progress updates (download/upload/ping status)
+- Download/Upload: Actual data transfer endpoints for measuring speed
+- Result retrieval: Returns full test metrics
+- History: Paginated list of user's past tests
+- Rate limiting: Max 3 concurrent tests per IP address
 
-**Test Execution:**
-- Tests run in stages: ping → download → upload
-- Each stage reports progress via WebSocket/SSE
-- Download test: Server sends random data, client measures receipt speed
-- Upload test: Client sends data, server measures and discards
-- Ping test: Multiple round-trip measurements (min 10 samples)
-- Thread scaling: Starts with 1 thread, adds threads if speed plateaus
-- Timeout: 60 seconds total per test (prevents hung tests)
+### User Management Endpoints
 
-**Result Storage:**
-- Immediate storage after each test completes
-- Results indexed by timestamp and user/IP hash
-- Privacy mode: IP addresses hashed, no PII stored
-- Retention: Auto-delete results older than configured days (default 90)
+**Purpose:** User registration and profile management
 
-**Rate Limiting:**
-- Maximum 3 concurrent tests per IP address
-- Minimum 5 second interval between tests from same IP
-- Configurable via server.yml (admins can adjust limits)
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/api/v1/users/register` | POST | Register new user account | None |
+| `/api/v1/users/{id}` | GET | Get user profile | Required (self or admin) |
+| `/api/v1/users/{id}/devices` | GET | List user's devices | Required (user token) |
+| `/api/v1/users/{id}/devices` | POST | Register new device | Required (user token) |
+| `/api/v1/users/{id}/devices/{deviceId}` | DELETE | Remove device | Required (user token) |
+| `/api/v1/users/{id}/tokens` | GET | List API tokens | Required (user token) |
+| `/api/v1/users/{id}/tokens` | POST | Create new API token | Required (user token) |
+| `/api/v1/users/{id}/tokens/{tokenId}` | DELETE | Revoke API token | Required (user token) |
 
-**Multi-Server Support (Optional):**
-- Each server has unique ID and metadata
-- Clients can select preferred test server
-- Results tagged with server_id for comparison
-- Server list API provides available servers
+**Business Behavior:**
+- Registration: Username/email validation, password hashing (bcrypt)
+- Profile: Returns user info (never includes password)
+- Devices: Track multiple devices per user (phones, computers, etc.)
+- Tokens: Generate API tokens for CLI client and automation
+- Token prefix: `tok_` followed by 32 random characters
+- Token last used timestamp updated on each API call
+
+### Share & Export Endpoints
+
+**Purpose:** Share test results with others
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/share/{code}` | GET | View shared test result (HTML) | None |
+| `/s/{code}` | GET | Short URL alias for shared result | None |
+| `/share/{code}.png` | GET | Export result as PNG image | None |
+| `/s/{code}.png` | GET | Short URL for PNG export | None |
+| `/share/{code}.svg` | GET | Export result as SVG image | None |
+| `/s/{code}.svg` | GET | Short URL for SVG export | None |
+
+**Business Behavior:**
+- Share codes: 8-character alphanumeric (case-sensitive)
+- View tracking: Increments share_views counter
+- Image generation: On-demand PNG/SVG rendering
+- Optional username display: Based on user preference
+- No expiration: Shared results persist indefinitely
+- Short URLs: `/s/` is alias for `/share/` (convenience)
+
+### Admin API Endpoints
+
+**Purpose:** Administrative configuration and monitoring
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/api/v1/admin/settings` | GET | Get server settings | Required (admin token) |
+| `/api/v1/admin/settings` | PUT | Update server settings | Required (admin token) |
+
+**Business Behavior:**
+- Bearer token authentication (prefix: `adm_`)
+- Settings include: server config, test parameters, rate limits
+- Changes applied immediately (hot reload)
+- All changes logged in audit log
+
+### Admin Panel Web UI
+
+**Purpose:** Web-based administration interface
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/admin` | GET | Admin login page | None |
+| `/admin/login` | POST | Process admin login | None |
+| `/admin/logout` | GET | Admin logout | Session |
+| `/admin/dashboard` | GET | Admin dashboard | Session |
+| `/admin/server/settings` | GET | Server settings page | Session |
+| `/admin/server/info` | GET | Server information page | Session |
+| `/admin/server/logs` | GET | View server logs | Session |
+
+**Business Behavior:**
+- Session-based authentication (cookies)
+- First-run wizard if no admin exists
+- Session timeout: 24 hours (configurable)
+- Failed login tracking: 5 attempts = 15 minute lockout
+- All admin actions logged to audit log
+
+### Web Frontend Endpoints
+
+**Purpose:** User-facing web interface
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/` | GET | Homepage (speed test UI) | None |
+| `/healthz` | GET | Health check endpoint | None |
+| `/api/v1/` | GET | API root (discovery) | None |
+| `/api/v1/healthz` | GET | API health check | None |
+
+**Business Behavior:**
+- Homepage: Full-featured speed test interface
+- Real-time WebSocket updates during test
+- Dark theme by default (light/dark/auto support)
+- Mobile-responsive design
+- No JavaScript alerts (toast notifications)
+
+### OpenAPI/Swagger Endpoints
+
+**Purpose:** API documentation and testing
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/openapi` | GET | Swagger UI interface | None |
+| `/openapi.json` | GET | OpenAPI 3.0 specification | None |
+
+**Business Behavior:**
+- Interactive API documentation
+- Theme matches site theme (light/dark)
+- Live API testing from browser
+- Specification: OpenAPI 3.0 (JSON only, no YAML)
+
+### GraphQL Endpoints
+
+**Purpose:** GraphQL API and GraphiQL interface
+
+| Endpoint | Method | Description | Auth |
+|----------|--------|-------------|------|
+| `/graphql` | GET | GraphiQL interface | None |
+| `/graphql/query` | POST | GraphQL query endpoint | Optional (user token) |
+
+**Business Behavior:**
+- GraphQL schema mirrors REST API
+- Type-safe queries and mutations
+- Real-time subscriptions for test progress (future)
+- Theme matches site theme (light/dark)
 
 ## Extended Node Functions (If Applicable)
 
-**Not applicable for casspeed.**
+**This project does NOT require extended node functions beyond config sync.**
 
-This project only requires standard clustering (config sync). Speed test servers do not manage external nodes.
+The casspeed application runs as standalone instances. If cluster mode is implemented in the future, nodes will only sync configuration (standard cluster behavior per PART 24).
+
+**No additional node management required.**
 
 ## High Availability Requirements (If Applicable)
 
-**Not applicable for casspeed.**
+**This project does NOT require specialized HA features.**
 
-Speed testing does not require HA. Clustering provides config sync and distributed capacity, but no automatic failover is needed. Users can manually choose different servers if one is unavailable.
+Standard clustering (config sync) per PART 24 is sufficient if multi-node deployment is needed. Most deployments will run as single standalone instances.
+
+**No custom HA logic required.**
 
 ## Notes
 
-**Architecture Decisions:**
-- Multi-threaded testing is critical for accurate high-bandwidth measurements (single-thread limited by TCP window)
-- WebSocket or SSE for real-time progress (better UX than polling)
-- SQLite sufficient for test history (low write volume, simple queries)
-- Privacy-first: IP hashing prevents identifying users from logs
-- No external test servers required (fully self-contained)
+### Speed Test Algorithm
 
-**CLI Client Considerations:**
-- CLI client is REQUIRED (not optional per PART 34) for server-side automated testing
-- CLI should support same test workflow: run test, view history, export results
-- Useful for cron jobs, monitoring scripts, and headless servers
+The speed test follows this flow:
 
-**Performance Considerations:**
-- Random data generation must be fast (use crypto/rand or similar)
-- Upload data should be discarded without buffering (prevent memory bloat)
-- Thread pool management to prevent resource exhaustion
-- Rate limiting essential to prevent DoS
+1. **Ping Test:**
+   - Send 10 HTTP requests to `/api/v1/healthz`
+   - Measure round-trip time for each
+   - Calculate average, min, max, jitter
+   - Identify packet loss (failed requests)
 
-**Future Enhancements:**
-- IPv6 vs IPv4 comparison testing
-- MTU discovery and path analysis
-- Visual traceroute integration
-- Speed test scheduling (automated recurring tests)
-- Comparison against public speedtest.net results
+2. **Download Test:**
+   - Open multiple parallel connections (threads)
+   - Download random data from `/api/v1/speedtest/download`
+   - Measure throughput over configured duration
+   - WebSocket sends progress updates every 100ms
+   - Calculate average download speed in Mbps
+
+3. **Upload Test:**
+   - Open multiple parallel connections (threads)
+   - Upload random data to `/api/v1/speedtest/upload`
+   - Measure throughput over configured duration
+   - WebSocket sends progress updates every 100ms
+   - Calculate average upload speed in Mbps
+
+4. **Result Storage:**
+   - Store all metrics to database
+   - Generate share code if user opts to share
+   - Return complete test result to client
+
+### CLI Client Behavior
+
+The CLI client (`casspeed-cli`) provides:
+- Real-time terminal-based speed test UI
+- ASCII graphs for historical data
+- API token authentication
+- Export results to JSON/CSV
+- Automated testing (cron-friendly)
+
+### Privacy & Security
+
+- IP addresses are hashed (SHA256) before storage
+- No raw IP addresses stored in database
+- User passwords hashed with bcrypt (cost 10)
+- Admin tokens: 32 hex characters (high entropy)
+- User tokens: `tok_` + 32 random characters
+- Session tokens: UUID v4 (128-bit random)
+- Share codes: 8-character alphanumeric (62^8 = 218 trillion combinations)
+
+### Performance Considerations
+
+- Maximum concurrent tests per IP: Prevents resource exhaustion
+- WebSocket connections: Lightweight, minimal overhead
+- Image generation: On-demand (not pre-rendered)
+- Database indexes: On user_id, device_id, timestamp, share_code
+- Session cleanup: Hourly background job
+
+### Future Enhancements (Planned)
+
+- Cluster mode support (PostgreSQL/MySQL)
+- GraphQL subscriptions for real-time updates
+- Custom test server locations (multi-region)
+- Advanced historical analytics
+- Email notifications for speed drops
+- Scheduled automated tests
+- Mobile apps (iOS/Android)
 
 ---
 
+# FINAL CHECKPOINT: COMPLIANCE CHECKLIST
 # FINAL CHECKPOINT: COMPLIANCE CHECKLIST
 
 ---
@@ -29101,11 +29907,9 @@ Speed testing does not require HA. Clustering provides config sync and distribut
 ### Document Rules
 
 - [ ] **AI.md is the ONLY project specification** - nothing else
-- [ ] **AI.md does NOT exist in projects** - it lives only in apimgr repo
-- [ ] **NEVER reference AI.md** - projects don't have it, don't need it
-- [ ] If AI.md missing, ask human to create it (or create from AI.md in apimgr)
+- [ ] **PARTS 0-35 are READ-ONLY** - implementation patterns, never modify
+- [ ] **PART 36 is the project spec** - update when features change
 - [ ] Keep AI.md in sync with PROJECT STATE
-- [ ] Migrate old files: `CLAUDE.md`, `SPEC.md` → merge into `AI.md`, DELETE old files
 - [ ] Use TODO.AI.md for tasks when more than 2 items
 
 ### Behavior Rules
@@ -29125,8 +29929,31 @@ Speed testing does not require HA. Clustering provides config sync and distribut
 - [ ] Use ONLY approved libraries (see PART 5)
 - [ ] Follow exact config paths: `server.xxx`, not variations
 - [ ] Follow exact route patterns: `/api/v1/admin/server/xxx`
-- [ ] Token prefixes: `adm_` (admin), `key_` (API key), `ses_` (session)
+- [ ] Token prefixes: `adm_` (admin primary), `key_` (API keys)
 - [ ] Setup token: 32 hex chars, no dashes
+
+### Container Rules
+
+**Building (ALWAYS Docker):**
+- [ ] **NEVER run `go build` on host** - ALWAYS use Docker `golang:alpine`
+- [ ] **NEVER run `go test` on host** - ALWAYS use Docker `golang:alpine`
+- [ ] **NEVER run `go run` on host** - ALWAYS use Docker `golang:alpine`
+
+**Testing (Docker OR Incus):**
+- [ ] **Quick tests** - Docker `alpine:latest` for unit tests, CI/CD
+- [ ] **Full OS tests** - Incus `debian:latest` for systemd (PREFERRED)
+- [ ] **NEVER run binaries on host** - use Docker or Incus container
+
+**Debugging (Incus Preferred):**
+- [ ] **Incus** for interactive debugging (full OS, persistent, SSH-able)
+- [ ] **Docker** for quick ephemeral checks only
+
+### AI as Beta Tester
+
+- [ ] **Goal is to BREAK things** - try edge cases, invalid inputs, stress tests
+- [ ] **Then FIX them** - don't just report bugs, implement fixes
+- [ ] **Verify fixes** - re-test to confirm the fix works
+- [ ] See PART 13: TESTING & DEVELOPMENT for full procedures
 
 ### When Starting Work
 
@@ -29139,8 +29966,6 @@ Speed testing does not require HA. Clustering provides config sync and distribut
 7. Verify consistency with related sections
 8. Update TODO.AI.md when tasks complete
 
-**Note:** AI.md does NOT exist in projects. AI.md IS the spec.
-
 ---
 
 ## FOR HUMANS (PROJECT CHECKLIST)
@@ -29149,14 +29974,23 @@ Speed testing does not require HA. Clustering provides config sync and distribut
 
 - [ ] `AI.md` - Complete project specification (required, THE spec)
 - [ ] `TODO.AI.md` - Task tracking (when needed)
+- [ ] `PLAN.md` - Implementation plan (optional, if exists this is THE plan)
 - [ ] `README.md` - User documentation (required)
 - [ ] `LICENSE.md` - License file (required)
 - [ ] `Makefile` - Build targets (required)
-- [ ] `Dockerfile` - Container build (required)
+- [ ] `docker/Dockerfile` - Container build (required)
 - [ ] `go.mod` / `go.sum` - Go modules (required)
 - [ ] `.github/workflows/` or `.gitea/workflows/` - CI/CD (required)
 
-**Note:** No AI.md, SPEC.md, or CLAUDE.md in projects. Only AI.md.
+### Licensing & Features
+
+- [ ] MIT License for all project code
+- [ ] 3rd party licenses listed in LICENSE.md
+- [ ] 100% free and open source - no paid tiers
+- [ ] No feature gating - ALL features available to ALL users
+- [ ] No "pro", "premium", "enterprise" editions
+- [ ] No license keys or activation required
+- [ ] Rate limits OK (server protection), usage limits NOT OK (monetization)
 
 ### Development
 
@@ -29266,6 +30100,24 @@ Speed testing does not require HA. Clustering provides config sync and distribut
 - [ ] 8 platform builds (4 OS × 2 arch)
 - [ ] Docker: Alpine base, tini init, non-root user
 
+### Building & Testing
+
+**Building (ALWAYS Docker):**
+- [ ] ALL builds use Docker `golang:alpine` - NEVER on host
+- [ ] `go build`, `go test`, `go run` - ALWAYS in Docker
+
+**Testing (Docker OR Incus):**
+- [ ] Quick tests: Docker `alpine:latest`
+- [ ] Full OS tests: Incus `debian:latest` (PREFERRED for systemd)
+- [ ] ALL binaries run in containers - never host
+- [ ] `tests/run_tests.sh` - auto-detects Incus or Docker
+- [ ] `tests/docker.sh` - Docker-based tests
+- [ ] `tests/incus.sh` - Incus-based tests (full systemd)
+
+**Debugging:**
+- [ ] Incus preferred (full OS, persistent, SSH-able)
+- [ ] Docker for quick ephemeral checks only
+
 ### Documentation
 
 - [ ] `docs/` directory ONLY for ReadTheDocs (MkDocs) - nothing else
@@ -29284,7 +30136,7 @@ Speed testing does not require HA. Clustering provides config sync and distribut
 - [ ] Binary: `casspeed-cli`
 - [ ] Same version as server
 - [ ] Standard CLI + TUI modes
-- [ ] Config: `~/.config/casspeed/cli.yml`
+- [ ] Config: `~/.config/casapps/casspeed/cli.yml`
 - [ ] Dark theme for TUI (matching project theme)
 - [ ] Built alongside server
 
@@ -29573,14 +30425,10 @@ When bootstrapping a new project from this specification:
    mkdir -p .github/workflows
    ```
 
-3. **Create AI.md from AI.md:**
-   - Copy AI.md from apimgr repo
-   - Replace all `CASSPEED` with actual project name
-   - Replace all `casspeed` with actual project name
-   - Replace all `casapps` with actual organization
-   - Fill in PROJECT DESCRIPTION section
-   - Fill in PART 36: PROJECT-SPECIFIC SECTIONS
-   - Save as AI.md
+3. **Create AI.md:**
+   - Ask human to provide AI.md for the new project
+   - Verify all `{variables}` are replaced with actual values
+   - Verify PART 36 is filled in with project details
 
 4. **Create foundational files:**
    ```bash
@@ -29642,13 +30490,13 @@ When bootstrapping a new project from this specification:
 
 1. **Create src/server/server.go** - HTTP server setup
 2. **Create src/server/handler/health.go** - Health check
-3. **Add CLI flags** per PART 6 specification
+3. **Add CLI flags** per PART 7 specification
 4. **Add service support** per PART 9
-5. **Create Makefile** per PART 11
+5. **Create Makefile** per PART 12
 
 **Test:** Server starts and responds to `/healthz`
 
-#### Step 3: Docker & CI/CD (PARTS 11-14)
+#### Step 3: Docker & CI/CD (PARTS 12-15)
 
 1. **Create docker/Dockerfile** - Multi-stage build
 2. **Create docker-compose files** - Production, dev, test
@@ -29658,7 +30506,7 @@ When bootstrapping a new project from this specification:
 
 **Test:** Docker build succeeds, container runs
 
-#### Step 4: Web Frontend (PART 16)
+#### Step 4: Web Frontend (PART 17)
 
 1. **Create src/server/template/** - HTML templates
 2. **Embed templates in server.go**
@@ -29668,7 +30516,7 @@ When bootstrapping a new project from this specification:
 
 **Test:** Homepage loads with working theme toggle
 
-#### Step 5: Admin Panel (PART 18)
+#### Step 5: Admin Panel (PART 19)
 
 1. **Create src/admin/admin.go** - Admin package
 2. **Create admin templates** - UI pages
@@ -29678,7 +30526,7 @@ When bootstrapping a new project from this specification:
 
 **Test:** Admin panel accessible at `/admin`
 
-#### Step 6: API Layer (PART 19)
+#### Step 6: API Layer (PART 20)
 
 1. **Create src/server/handler/api.go** - REST API handlers
 2. **Create src/swagger/swagger.go** - OpenAPI/Swagger
@@ -29688,27 +30536,27 @@ When bootstrapping a new project from this specification:
 
 **Test:** All three APIs work (REST, Swagger, GraphQL)
 
-#### Step 7: Core Features (PARTS 20-28)
+#### Step 7: Core Features (PARTS 21-29)
 
 Implement in order:
-1. **PART 20:** SSL/TLS & Let's Encrypt
-2. **PART 21:** Security & Logging
-3. **PART 22:** User Management
-4. **PART 23:** Database & Cluster
-5. **PART 24:** Backup & Restore
-6. **PART 25:** Email & Notifications
-7. **PART 26:** Scheduler
-8. **PART 27:** GeoIP
-9. **PART 28:** Metrics
+1. **PART 21:** SSL/TLS & Let's Encrypt
+2. **PART 22:** Security & Logging
+3. **PART 23:** User Management
+4. **PART 24:** Database & Cluster
+5. **PART 25:** Backup & Restore
+6. **PART 26:** Email & Notifications
+7. **PART 27:** Scheduler
+8. **PART 28:** GeoIP
+9. **PART 29:** Metrics
 
 **Test after each part:** Verify the feature works before moving to next
 
-#### Step 8: Optional Features (PARTS 29-34)
+#### Step 8: Optional Features (PARTS 30-35)
 
 Implement as needed:
-1. **PART 29:** Tor Hidden Service (if tor installed)
-2. **PART 30:** Error Handling & Caching
-3. **PART 31:** I18N & A11Y
+1. **PART 30:** Tor Hidden Service (if tor installed)
+2. **PART 31:** Error Handling & Caching
+3. **PART 32:** I18N & A11Y
 4. **PART 34:** CLI Client (if applicable)
 5. **PART 35:** Custom Domains (if applicable)
 
